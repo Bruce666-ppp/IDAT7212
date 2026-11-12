@@ -1,0 +1,58 @@
+name: Import verified KneeUp English website
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-website:
+    if: github.repository == 'Bruce666-ppp/IDAT7212' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repository only
+        uses: actions/checkout@v4
+      - name: Verify archive and restore static website
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import hashlib, zipfile, tempfile
+          root = Path.cwd()
+          parts = [root / f"kneeup-site.part-{i:02d}" for i in range(1, 20)]
+          if not all(p.is_file() for p in parts):
+              raise SystemExit("All nineteen archive parts must be uploaded before running this import.")
+          with tempfile.TemporaryDirectory() as folder:
+              archive = Path(folder) / "website.zip"
+              digest = hashlib.sha256()
+              with archive.open("wb") as out:
+                  for part in parts:
+                      data = part.read_bytes()
+                      digest.update(data)
+                      out.write(data)
+              if digest.hexdigest() != "959d1fd44cabdaf30aef7cbce1793398c7233774192dcbd92b78f5db20211534":
+                  raise SystemExit("Archive checksum mismatch; nothing was extracted or committed.")
+              with zipfile.ZipFile(archive) as z:
+                  names = z.namelist()
+                  if len(names) != 293 or z.testzip() is not None:
+                      raise SystemExit("Unexpected file count or invalid archive.")
+                  for name in names:
+                      path = PurePosixPath(name)
+                      if path.is_absolute() or ".." in path.parts or ".git" in path.parts or ".github" in path.parts:
+                          raise SystemExit("Unsafe archive path.")
+                  z.extractall(root)
+          for name in ["index.html", ".nojekyll", "apps.html", "3d.html", "demo.html", "meniscus/index.html", "assets/models/leg_web.glb"]:
+              if not (root / name).is_file():
+                  raise SystemExit("Missing deployment asset: " + name)
+          for part in parts:
+              part.unlink()
+          print("Verified and restored all 293 website files. Original repositories were not contacted or modified.")
+          PY
+      - name: Commit restored website to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git commit -m "Import verified English KneeUp website"
+          git push origin HEAD:main
