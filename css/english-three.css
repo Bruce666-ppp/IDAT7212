@@ -1,3 +1,11 @@
+/* Keep the longer English HUD clear of the mode buttons. */
+@media (min-width: 768px) {
+  html:lang(en) #hint,
+  html:lang(en) #corner {
+    bottom: calc(max(16px, env(safe-area-inset-bottom)) + 72px);
+  }
+}
+
 /* English labels need a bounded right-hand HUD on narrow screens. */
 @media (max-width: 767px) {
   html:lang(en) #corner { max-width: calc(50vw - 20px); }
