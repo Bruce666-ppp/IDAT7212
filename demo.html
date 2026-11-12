@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>KneeUp · Wearable Movement-Sensing Prototype</title>
+  <meta name="description" content="KneeUp: a wearable movement-sensing prototype with immediate browser-based movement-quality feedback, training games and an original 3D brace model. Support you feel. Feedback you can act on.">
+  <!-- og 占位：og.png 待按 C11 §三 重做（1200×630，碳黑×钴蓝，先引用路径） -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KneeUp — Support you feel. Feedback you can act on.">
+  <meta property="og:description" content="A wearable movement-sensing prototype with immediate browser feedback, training games and an original 3D brace model.">
+  <meta property="og:image" content="./assets/img/og.png">
+  <meta property="og:url" content="./">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- 极少关键内联样式：首屏底色防闪白 -->
+  <style>html{background:#0B0C0E}</style>
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/landing.css">
+  <link rel="stylesheet" href="./css/english-copy.css">
+</head>
+<body>
+
+  <!-- 01 sticky 导航 -->
+  <header class="site-nav" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">KneeUp <span class="brand-cn"></span></a>
+      <nav class="nav-chips" aria-label="Section navigation">
+        <a href="#product">Product</a>
+        <a href="#demo">Demo</a>
+        <a href="#tech">Technology</a>
+        <a href="#business">Business</a>
+        <a href="#compliance">Transparency</a>
+        <a href="#team">Team</a>
+      </nav>
+      <a class="btn nav-cta" href="#demo">Try Demo</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 02 Hero -->
+    <section id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">WEARABLE MOVEMENT-SENSING PROTOTYPE</p>
+          <h1>KneeUp</h1>
+          <p class="hero-tagline">Support you feel. Feedback you can act on.</p>
+          <p class="lead">Your training companion: open the webpage to see squat depth, left/right symmetry and movement-quality feedback from the camera.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#demo">Try Live Demo</a>
+            <a class="btn ghost" href="#demo">Watch Simulated Demo</a>
+          </div>
+          <p class="hero-badges">
+            <span class="ku-chip sim">SIMULATED DATA</span>
+            <span class="ku-chip" title="Data is simulated unless the ● LIVE indicator is on">Simulated unless ● LIVE is on</span>
+          </p>
+        </div>
+        <div class="hero-media">
+          <!-- compliance:start --><!-- 否定式Transparency声明（豁免件，K5/C8） -->
+          <span class="nomed-badge" role="note">Not a Medical Device</span>
+          <!-- compliance:end -->
+          <img src="./assets/img/hero-wear.webp" alt="KneeUp brace wearing concept: knee support while climbing stairs" width="880" height="880" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 #why 问题共识 -->
+    <section id="why" class="alt">
+      <div class="container">
+        <p class="eyebrow">WHY NOW</p>
+        <h2>Your knees carry the load.</h2>
+        <p class="lead">Without feedback, changes in movement and accumulated load can go unnoticed.</p>
+        <div class="stat-grid">
+          <div class="card stat-card">
+            <p class="stat-num">≈61<span class="stat-unit">/100k·year</span></p>
+            <p class="stat-desc">Estimated annual meniscal injuries per 100,000 people (literature estimate)</p>
+            <p class="stat-foot">Source: PMC9205760 · Literature estimate</p>
+          </div>
+          <div class="card stat-card">
+            <p class="stat-num">12–14%<span class="stat-unit">est.</span></p>
+            <p class="stat-desc">Literature estimate: meniscal findings on knee MRI in asymptomatic people</p>
+            <p class="stat-foot">Source: literature estimate (reported range)</p>
+          </div>
+        </div>
+        <p class="muted note-line">Figures are literature-based context estimates, not measurements from this project.</p>
+      </div>
+    </section>
+
+    <!-- 04 #product Product与 3D -->
+    <section id="product">
+      <div class="container">
+        <p class="eyebrow">PRODUCT</p>
+        <h2>Support, airflow and sensing in one brace.</h2>
+        <div class="product-grid">
+          <a class="card product-card" href="./3d.html" aria-label="Open the Original 3D Brace Model">
+            <span class="badge-3d">Interactive 3D · Original CAD model</span>
+            <img src="./assets/img/product-water.webp" alt="KneeUp product render showing the full brace with a water-splash background" width="1200" height="750" loading="lazy">
+            <div class="product-card-body">
+              <strong>Original 3D brace model</strong>
+              <span class="muted">The original Rhino CAD model is converted directly to a web GLB. Rotate it, explore its layers and inspect the structure. This is the team's model, not a purchased asset. Open 3d.html to explore.</span>
+            </div>
+          </a>
+          <div class="feature-col">
+            <div class="card feature">
+              <img class="feature-img" src="./assets/img/feat-support.webp" alt="Close-up wearing render: support structure around the knee" width="640" height="640" loading="lazy">
+              <h3>Support</h3>
+              <p class="muted">A close-fitting support structure designed to guide knee movement, with adjustable support that the wearer can feel.</p>
+            </div>
+            <div class="card feature">
+              <img class="feature-img" src="./assets/img/feat-airflow.webp" alt="Exploded brace render showing the air channels throughout the structure" width="640" height="400" loading="lazy">
+              <h3>Airflow</h3>
+              <p class="muted">Air channels run through the brace to support ventilation during longer training sessions and make sustained wear more comfortable.</p>
+            </div>
+            <div class="card feature">
+              <img class="feature-img contain" src="./assets/img/feat-smart.webp" alt="Vertical brace render showing the sensing and feedback module arrangement" width="400" height="523" loading="lazy">
+              <h3>Intelligence</h3>
+              <p class="muted">The sensing and feedback roadmap: camera input is available now; textile sensing is in development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 #demo Demo（含 #form 块头，per C7 裁决①） -->
+    <section id="demo" class="alt">
+      <div class="container">
+        <p class="eyebrow">LIVE DEMO</p>
+        <h2>How did that movement go?</h2>
+        <p class="lead">Three channels provide immediate reference feedback: visual cues, game feedback and signal charts. These are movement-quality indicators only.</p>
+        <ul class="evidence-chips" aria-label="Evidence chain">
+          <li class="ku-chip live">SEEING</li>
+          <li class="ku-chip live">MEASURING</li>
+          <li class="ku-chip live">EXPLAINABLE</li>
+        </ul>
+
+        <div class="card demo-card">
+          <div class="demo-main">
+            <div class="stage" aria-label="Camera demonstration">
+              <video id="ku-video" playsinline muted></video>
+              <canvas id="ku-overlay" aria-hidden="true"></canvas>
+              <div class="stage-hint">
+                <p>Camera frames will appear here with a skeleton overlay, knee angles and movement cues.<br><span class="muted">Camera preview with skeleton overlay appears here.</span></p>
+              </div>
+            </div>
+            <div class="demo-actions">
+              <button class="btn" id="ku-start-live" type="button">Start Camera Demo</button>
+              <button class="btn ghost" id="ku-start-sim" type="button">Watch Simulated Demo</button>
+              <button class="btn ghost" id="ku-start-ble" type="button">Connect Brace via BLE · LIVE</button>
+              <p class="privacy-note"><span class="ku-chip">ON-DEVICE</span> Camera frames are processed only in your browser. No video is uploaded and no face data is stored.</p>
+            </div>
+            <div class="cues-wrap">
+              <div class="cues-head"><span class="eyebrow">CUES</span><span id="ku-chip" class="ku-chip sim">SIMULATED</span></div>
+              <div id="ku-cues" aria-live="polite">
+                <p class="muted">Movement cues will appear here: knee direction, squat depth and left/right symmetry.<br>Cues appear here during the demo.</p>
+              </div>
+            </div>
+          </div>
+          <aside class="demo-panel" aria-label="Current metrics">
+            <p class="eyebrow">CURRENT METRICS</p>
+            <dl class="metrics">
+              <div class="metric"><dt>Left knee peak angle <span class="muted">L knee</span></dt><dd id="ku-lk" class="mono-val">—</dd></div>
+              <div class="metric"><dt>Right knee peak angle <span class="muted">R knee</span></dt><dd id="ku-rk" class="mono-val">—</dd></div>
+              <div class="metric"><dt>Symmetry <span class="muted">Symmetry</span></dt><dd id="ku-sym" class="mono-val">—</dd></div>
+              <div class="metric"><dt>Quality score <span class="muted">Quality</span></dt><dd id="ku-ql" class="mono-val">—</dd></div>
+              <div class="metric"><dt>Reps <span class="muted">Reps</span></dt><dd id="ku-reps" class="mono-val">—</dd></div>
+            </dl>
+            <p class="muted note-line">Knee angle = hip–knee–ankle angle. Rep-count hysteresis: DOWN&lt;100° / UP&gt;160°. If camera access fails or no person is visible, the demo falls back to simulated input within 10 seconds.</p>
+          </aside>
+          <div class="game-wrap">
+            <div class="cues-head"><span class="eyebrow">GAMIFIED TRAINING</span><span class="ku-chip sim">SIMULATED DEMO</span></div>
+            <div id="ku-game" aria-label="Training game">
+              <p class="muted">Charge through squats and climb with combos. Successful movements give immediate visual feedback. Start a demo to activate the game.<br>Charge faster and the combo climbs — good reps show, instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 #tech Technology背书 -->
+    <section id="tech">
+      <div class="container">
+        <p class="eyebrow">TECHNOLOGY</p>
+        <h2>Three layers, with two running today.</h2>
+        <div class="stack-grid">
+          <div class="card layer">
+            <p class="eyebrow">L1 · VISION AI</p>
+            <h3>Pose estimation in your browser</h3>
+            <p class="muted">MediaPipe Pose provides a skeleton overlay and computes knee angles, symmetry and movement-quality scores on the device.</p>
+            <span class="layer-tag today">RUNS TODAY</span>
+          </div>
+          <div class="card layer">
+            <p class="eyebrow">L2 · RULE ENGINE</p>
+            <h3>Rep counts, target ranges and cues</h3>
+            <p class="muted">Hysteresis counting, target-range checks and cue generation run in the browser. Desktop Chrome also includes an experimental Web Serial interface, with ● LIVE / ○ SIMULATED indicators and a signal-loss fallback. Real-time integration with the Arduino prototype is not yet validated.</p>
+            <span class="layer-tag today">RUNS TODAY</span>
+          </div>
+          <div class="card layer is-roadmap">
+            <p class="eyebrow">L3 · TEXTILE SENSING</p>
+            <h3>Signals directly from the brace</h3>
+            <p class="muted">The future sensing layer aims to collect signals from textile sensors worn against the body, reducing dependence on a camera.</p>
+            <span class="layer-tag roadmap">ROADMAP</span>
+          </div>
+        </div>
+        <p class="tagline">The demo above runs L1 and L2 today.</p>
+        <div class="hw-strip" aria-label="Hardware progress">
+          <div class="hw-item"><strong>sEMG sensing</strong><span class="hw-status ok">Bench prototype demonstrated</span></div>
+          <div class="hw-item"><strong>Air-cell array</strong><span class="hw-status ok">Bench integration demonstrated</span></div>
+          <div class="hw-item"><strong>MQTT uplink</strong><span class="hw-status wip">Integration in progress</span></div>
+          <div class="hw-item"><strong>Textile sensing</strong><span class="hw-status roadmap">Roadmap</span></div>
+        </div>
+        <p class="muted note-line">The hardware has been powered and serial output demonstrated on the bench. These images show working prototype units. Live integration with this website has not been completed.</p>
+      </div>
+    </section>
+
+    <!-- 07 #business Business -->
+    <section id="business" class="alt">
+      <div class="container">
+        <p class="eyebrow">BUSINESS</p>
+        <h2>Two routes to market.</h2>
+        <div class="biz-grid">
+          <div class="card biz-card">
+            <p class="eyebrow">FOR INDIVIDUAL TRAINING</p>
+            <h3>Personal edition</h3>
+            <p class="muted">Your training companion: open the website to see squat depth, symmetry and movement quality from camera input. No installation or dedicated hardware is required for the camera demo.</p>
+            <p class="muted en">Your always-available training companion — instant depth, symmetry and quality scores in the browser.</p>
+            <a class="btn" href="#demo">Open the Training Demo</a>
+          </div>
+          <div class="card biz-card">
+            <p class="eyebrow">FOR FACILITIES</p>
+            <h3>Facility edition</h3>
+            <p class="muted">A coach-facing screen concept for reviewing movement quality across a group and distributing training settings.</p>
+            <p class="muted en">A live coach console — the whole squad's movement quality on one screen.</p>
+            <a class="btn ghost" href="./apps.html">See the Facility Edition</a>
+          </div>
+        </div>
+        <p class="tagline">Sensor-equipped braces address the need for physical sensing. KneeUp adds a browser-based layer with no installation: interactive 3D movement feedback and training games.</p>
+      </div>
+    </section>
+
+    <!-- 08 #compliance Transparency姿态 -->
+    <section id="compliance">
+      <div class="container">
+        <p class="eyebrow">TRANSPARENCY</p>
+        <h2>Clear boundaries are part of the product.</h2>
+        <!-- compliance:start --><!-- 否定式Transparency声明（豁免件，K5 §4 / K14 §③） -->
+        <blockquote class="wall-quote">
+          <p>KneeUp makes no medical claims. It provides training feedback; qualified professionals handle diagnosis and care. These boundaries shape the product, not just its footer.</p>
+          <p class="en">KneeUp is a training tool, not a medical device — form feedback, not diagnosis. We say it up front, on purpose.</p>
+        </blockquote>
+        <!-- compliance:end -->
+        <div class="comp-grid">
+          <!-- compliance:start -->
+          <div class="card comp-card">
+            <h3>NOT A MEDICAL DEVICE</h3>
+            <p class="muted">A sports-support and training-feedback prototype, with no diagnosis, treatment or efficacy claims.</p>
+            <p class="muted en">A sports-support, training-feedback prototype: no diagnosis, no treatment, no outcome promises.</p>
+          </div>
+          <!-- compliance:end -->
+          <div class="card comp-card">
+            <h3>ON-DEVICE BY DEFAULT</h3>
+            <p class="muted">Camera frames are processed in the browser, with no video upload and no stored face data.</p>
+            <p class="muted en">Camera frames are computed inside your browser — nothing uploaded, no face stored.</p>
+          </div>
+          <div class="card comp-card">
+            <h3>LABELLED SIMULATED</h3>
+            <p class="muted">Every simulated channel carries a SIMULATED indicator so visitors can distinguish demonstration data from live input.</p>
+            <p class="muted en">Anything not from live hardware carries a SIMULATED chip — verifiable on the spot.</p>
+          </div>
+        </div>
+        <!-- compliance:start -->
+        <p class="muted note-line">Roadmap: determine classification and an appropriate certification path according to the eventual intended use. This is planned, not a current certification claim.</p>
+        <!-- compliance:end -->
+      </div>
+    </section>
+
+    <!-- 09 #team Team -->
+    <section id="team" class="alt">
+      <div class="container">
+        <p class="eyebrow">TEAM FREE WILL</p>
+        <h2>Building the brace and making feedback visible.</h2>
+        <div class="team-grid">
+          <div class="card team-card">
+            <div class="avatar" aria-hidden="true">BW</div>
+            <strong>Boyang Wan</strong>
+            <span class="muted">Industrial Design</span>
+            <a href="https://waffledesign.site" rel="noopener">waffledesign.site</a>
+          </div>
+          <div class="card team-card is-tbd">
+            <div class="avatar" aria-hidden="true">·</div>
+            <strong>[To be added]</strong>
+            <span class="muted">Hardware / Firmware</span>
+            <span class="muted">[To be added]</span>
+          </div>
+          <div class="card team-card is-tbd">
+            <div class="avatar" aria-hidden="true">·</div>
+            <strong>[To be added]</strong>
+            <span class="muted">Software / Web</span>
+            <span class="muted">[To be added]</span>
+          </div>
+          <div class="card team-card is-tbd">
+            <div class="avatar" aria-hidden="true">·</div>
+            <strong>[To be added]</strong>
+            <span class="muted">Algorithm / Data</span>
+            <span class="muted">[To be added]</span>
+          </div>
+          <div class="card team-card is-tbd">
+            <div class="avatar" aria-hidden="true">·</div>
+            <strong>[To be added]</strong>
+            <span class="muted">Business / Ops</span>
+            <span class="muted">[To be added]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10 footer -->
+  <footer id="footer">
+    <div class="container">
+      <p class="footer-tagline">Support you feel. Feedback you can act on.</p>
+      <!-- disclaimer:start --><!-- 17 号稿免责声明原文（照抄，勿改）+ KneeUp 短版 -->
+      <div class="disclaimer">
+        <p><strong>MENISCUS SHIELD is a sports support and training-feedback product. It is not a medical device and is not intended to diagnose, treat, rehabilitate, or prevent any injury or disease. If you experience pain or injury, consult a qualified medical professional.</strong></p>
+        <p><strong>Hardware status: the website uses simulated sensor data. Real-time Arduino integration is not implemented; the BLE, Serial and M5 interfaces have not been validated with the physical prototype.</strong></p>
+        <p class="muted">KneeUp is a sports-training prototype, not medical advice, diagnosis or treatment. The web sensor demonstration uses simulated data.<br>KneeUp is a sports-training prototype. Not a medical device; no diagnosis or treatment. All data shown is simulated.</p>
+      </div>
+      <!-- disclaimer:end -->
+      <div class="footer-meta">
+        <span class="muted">Contact: team@… (to be added) · <a href="https://waffledesign.site" rel="noopener">waffledesign.site</a></span>
+        <span class="muted">© 2026 Team Free Will</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/demo-bind.js" defer></script>
+</body>
+</html>

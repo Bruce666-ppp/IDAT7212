@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "name": "kneeup-demo-55s-en.mp4: all video and audio streams decode fully",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "kneeup-demo-55s-en.mp4: original frame count, dimensions and frame rate",
+      "status": "PASS",
+      "detail": {
+        "frames": 1650,
+        "fps": 30.0,
+        "size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "name": "kneeup-submission-3min-en.mp4: all video and audio streams decode fully",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "kneeup-submission-3min-en.mp4: original frame count, dimensions and frame rate",
+      "status": "PASS",
+      "detail": {
+        "frames": 5400,
+        "fps": 30.0,
+        "size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "name": "55-second video: original AAC audio bitstream unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "Three-minute narration: all 32 complete English cues fit without overlap or retiming",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "English subtitle files contain no Chinese characters",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "passed": 7,
+  "failed": 0,
+  "review_limit": "Full decode plus sampled frames/OCR; no full listening review."
+}

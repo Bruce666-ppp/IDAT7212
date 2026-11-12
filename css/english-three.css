@@ -1,0 +1,6 @@
+/* English labels need a bounded right-hand HUD on narrow screens. */
+@media (max-width: 767px) {
+  html:lang(en) #corner { max-width: calc(50vw - 20px); }
+  html:lang(en) #corner .meta { overflow-wrap: anywhere; }
+  html:lang(en) #corner .ku-chip { max-width: 100%; white-space: normal; }
+}

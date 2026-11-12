@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KneeUp Apps · App Centre</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/apps.css">
+</head>
+<body>
+
+<header class="apps-topbar">
+  <div class="apps-topbar-inner">
+    <a class="apps-back" href="demo.html">← Back to Website</a>
+    <span class="apps-brand">KneeUp <b>Apps</b></span>
+    <span class="ku-chip sim">SIMULATED DATA · Demo data, not measurements</span>
+  </div>
+  <nav class="apps-nav" id="apps-nav" aria-label="App navigation">
+    <a href="#/patient" data-route="patient" class="apps-chip">Patient Dashboard</a>
+    <a href="#/coach"   data-route="coach"   class="apps-chip">Coach Console</a>
+    <a href="#/screen"  data-route="screen"  class="apps-chip">AI Dashboard</a>
+    <a href="#/assist"  data-route="assist"  class="apps-chip">Assist Level</a>
+    <a href="#/game"    data-route="game"    class="apps-chip">Training Game</a>
+    <a href="#/body"    data-route="body"    class="apps-chip">Body Map</a>
+  </nav>
+</header>
+
+<main id="app" class="apps-main" aria-live="polite"></main>
+
+<footer class="apps-foot">
+  <div class="container">
+    <!-- disclaimer:start -->
+    <p class="foot-note"><strong>MENISCUS SHIELD is a sports support and training-feedback product. It is not a medical device and is not intended to diagnose, treat, rehabilitate, or prevent any injury or disease. If you experience pain or injury, consult a qualified medical professional.</strong></p>
+    <p class="foot-note"><strong>Hardware status: the website uses simulated sensor data. Real-time Arduino integration is not implemented; the BLE, Serial and M5 interfaces have not been validated with the physical prototype.</strong></p>
+    <!-- disclaimer:end -->
+    <p class="foot-note">© Team Free Will · KneeUp · Local SIMULATED demo data. Every exported JSON record retains its source label.</p>
+  </div>
+</footer>
+
+<script type="module" src="js/router.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>KneeUp · Brace 3D Laboratory</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/three.css">
+<link rel="stylesheet" href="css/english-three.css">
+</head>
+<body>
+
+<canvas id="stage" aria-label="KneeUp brace 3D view"></canvas>
+
+<!-- 四锚点 DOM 图钉层（heat 模式淡入，坐标由 js/three/scene.js 每帧投影） -->
+<div id="pins" aria-hidden="true"></div>
+
+<!-- 左上：标题 + Back to Website -->
+<header class="hud" id="title">
+  <a class="back" href="demo.html">← Back to Website</a>
+  <b>KneeUp · Brace 3D Laboratory</b>
+  <small>Original brace CAD in your browser · Drag to rotate / Pinch to zoom</small>
+</header>
+
+<!-- 模式按钮sets（CONTRACT 四值；inner 本轮禁用占位） -->
+<nav class="hud" id="modes" role="group" aria-label="View modes">
+  <button class="mode-btn is-on" data-mode="product">Product detail<span>PRODUCT</span></button>
+  <button class="mode-btn" data-mode="wear">Wearing relationship<span>WEAR</span></button>
+  <button class="mode-btn" data-mode="inner" title="Internal structure · Procedural anatomy schematic, not a medical model">Internal structure<span>INNER</span></button>
+  <button class="mode-btn" data-mode="heat">Regional heat map<span>HEAT</span></button>
+</nav>
+
+<p class="hud" id="hint">Slow rotation · Drag to rotate / Scroll to zoom</p>
+
+<!-- 右下：Transparency角标 + 模型标注 + heat 数据 chip -->
+<aside class="hud" id="corner">
+  <span class="tag">ANATOMY SCHEMATIC</span>
+  <span class="meta">Model: compressed original CAD GLB · 128,000 faces</span>
+  <span class="ku-chip sim" id="heat-chip">SIMULATED · Demo data</span>
+</aside>
+
+<!-- 锚点结构卡片（K10 gearAtlas 中英文案） -->
+<aside class="hud" id="zone-card" hidden>
+  <button id="zc-close" aria-label="Close">×</button>
+  <header><b id="zc-title"></b><span class="en" id="zc-en"></span></header>
+  <p id="zc-cn"></p>
+  <p class="en-copy" id="zc-en-copy"></p>
+  <span class="ku-chip">PRODUCT SCHEMATIC</span>
+</aside>
+
+<div id="loading"><span>LOADING · Loading the brace model…</span></div>
+
+<!-- 兜底：WebGL 不可用 / 微信 UA / 模型载入失败 → Renders轮播 -->
+<div id="fallback" hidden>
+  <figure class="fb-frame">
+    <img src="assets/img/p2-1.jpg" alt="KneeUp brace product render: side view" class="is-on">
+    <img src="assets/img/p2-3.jpg" alt="KneeUp brace product render: detail">
+  </figure>
+  <div class="fb-card hud">
+    <b>KneeUp Brace · Product Renders</b>
+    <p id="fb-reason">WebGL is unavailable in this browser. A product-render slideshow is displayed instead.</p>
+    <a class="btn ghost" href="demo.html">Back to Website</a>
+  </div>
+</div>
+
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/three.module.js",
+  "three/addons/": "./vendor/three/addons/"
+} }
+</script>
+<script type="module" src="js/three/scene.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+1
+00:00:00,200 --> 00:00:04,439
+Keep walking the paths you choose. We are KneeUp.
+
+2
+00:00:04,795 --> 00:00:11,988
+Zhiyuan, sixty-two, is a fictional demonstration character who wants to keep hiking familiar trails.
+
+3
+00:00:12,028 --> 00:00:16,837
+We focus on independently mobile adults aged sixty to seventy-five.
+
+4
+00:00:18,200 --> 00:00:21,964
+This is the team's existing footage of the real prototype.
+
+5
+00:00:23,152 --> 00:00:28,115
+EMG electrodes on the leg connect to the controller and pump test bench.
+
+6
+00:00:28,829 --> 00:00:34,262
+Live integration between this website and the hardware still needs on-site verification.
+
+7
+00:00:35,200 --> 00:00:39,839
+The air-cell samples show our exploration of manufacturing methods.
+
+8
+00:00:40,168 --> 00:00:46,646
+This footage does not validate assistance effects. A control level is not air pressure.
+
+9
+00:00:48,200 --> 00:00:53,519
+KneeUp connects a pneumatic brace, sensing records and AI observations.
+
+10
+00:00:54,269 --> 00:00:58,683
+The current website and AI do not send pump-control commands.
+
+11
+00:01:00,200 --> 00:01:03,664
+Now, see how a movement record is created.
+
+12
+00:01:04,558 --> 00:01:10,622
+Today's task follows a team demonstration script, using synthetic EMG data.
+
+13
+00:01:11,553 --> 00:01:16,097
+Camera and EMG inputs each retain their own source labels.
+
+14
+00:01:16,200 --> 00:01:20,844
+Once recording begins, data and events enter the same session.
+
+15
+00:01:22,458 --> 00:01:27,202
+This software demonstration uses synthetic data to test the workflow.
+
+16
+00:01:28,362 --> 00:01:34,080
+Missing measurements stay not measured. We now manually mark a voluntary end.
+
+17
+00:01:36,200 --> 00:01:39,484
+This view shows the current analysis status.
+
+18
+00:01:39,524 --> 00:01:45,577
+External AI is not configured. Only local rule explanations appear below.
+
+19
+00:01:45,617 --> 00:01:51,921
+Model observations and references remain empty. No model answer is fabricated.
+
+20
+00:01:51,961 --> 00:01:56,819
+Existing rule explanations retain their input window and data sources.
+
+21
+00:01:57,200 --> 00:02:02,779
+Switch to the professional view, inspect the same record, and mark it reviewed.
+
+22
+00:02:03,349 --> 00:02:08,663
+Back in the user view, this confirmation still belongs to the original session.
+
+23
+00:02:08,703 --> 00:02:12,401
+The demonstration switches roles on the same computer.
+
+24
+00:02:13,200 --> 00:02:16,024
+Every observation should have a source.
+
+25
+00:02:16,542 --> 00:02:22,390
+The voluntary end is manually annotated. A person must explain the reason.
+
+26
+00:02:22,430 --> 00:02:26,244
+The system does not infer fatigue from this event alone.
+
+27
+00:02:27,200 --> 00:02:32,348
+Existing smart knee braces already connect users with professional services.
+
+28
+00:02:32,388 --> 00:02:38,187
+We need to validate how much assistance pneumatics provide, and how much wearing burden they add.
+
+29
+00:02:40,200 --> 00:02:44,154
+We are seeking one organisation and one professional lead.
+
+30
+00:02:44,317 --> 00:02:48,955
+We propose a four-week user-experience pilot with ten participants.
+
+31
+00:02:49,851 --> 00:02:55,879
+Pneumatic-assistance effects need separate validation. Recruitment has not begun.
+
+32
+00:02:55,919 --> 00:02:59,904
+KneeUp. Keep walking the paths you choose.

@@ -1,0 +1,2383 @@
+{
+  "source_url": "https://github.com/KINGKAZMAX/kneeup-aix-origin-2026-vital/releases/download/v1.0/Kneeup-3min-submission-video.mp4",
+  "source_sha256": "08e7ce34b062d67b21ad69e04328ed666beda9e7a39344ac4e9a3659775948ac",
+  "english_video": "kneeup-submission-3min-en.mp4",
+  "fps": 30.0,
+  "frames": 5400,
+  "method": "Text-region overlays over original video frames; original cuts, graphics and physical footage retained",
+  "voice": "Microsoft Zira Desktop (installed Windows English voice), default rate 0; no retiming",
+  "audio_change": "Chinese synthetic narration replaced by English synthetic narration; no cloned voice",
+  "caption_count": 32,
+  "cues": [
+    {
+      "id": 1,
+      "start": 0.2,
+      "original_end": 3.57,
+      "duration": 4.23891156462585,
+      "end": 4.43891156462585,
+      "text": "Keep walking the paths you choose. We are KneeUp.",
+      "source_start": 0.2
+    },
+    {
+      "id": 2,
+      "start": 4.795,
+      "original_end": 10.499,
+      "duration": 7.1932426303854875,
+      "end": 11.988242630385487,
+      "text": "Zhiyuan, sixty-two, is a fictional demonstration character who wants to keep hiking familiar trails.",
+      "source_start": 4.795
+    },
+    {
+      "id": 3,
+      "start": 12.028242630385487,
+      "original_end": 16.475,
+      "duration": 4.808616780045352,
+      "end": 16.83685941043084,
+      "text": "We focus on independently mobile adults aged sixty to seventy-five.",
+      "source_start": 11.724
+    },
+    {
+      "id": 4,
+      "start": 18.2,
+      "original_end": 21.516,
+      "duration": 3.763673469387755,
+      "end": 21.963673469387754,
+      "text": "This is the team's existing footage of the real prototype.",
+      "source_start": 18.2
+    },
+    {
+      "id": 5,
+      "start": 23.152,
+      "original_end": 27.193,
+      "duration": 4.963446712018141,
+      "end": 28.11544671201814,
+      "text": "EMG electrodes on the leg connect to the controller and pump test bench.",
+      "source_start": 23.152
+    },
+    {
+      "id": 6,
+      "start": 28.829,
+      "original_end": 33.064,
+      "duration": 5.433287981859411,
+      "end": 34.26228798185941,
+      "text": "Live integration between this website and the hardware still needs on-site verification.",
+      "source_start": 28.829
+    },
+    {
+      "id": 7,
+      "start": 35.2,
+      "original_end": 38.558,
+      "duration": 4.638503401360544,
+      "end": 39.83850340136055,
+      "text": "The air-cell samples show our exploration of manufacturing methods.",
+      "source_start": 35.2
+    },
+    {
+      "id": 8,
+      "start": 40.168,
+      "original_end": 46.091,
+      "duration": 6.478367346938776,
+      "end": 46.646367346938774,
+      "text": "This footage does not validate assistance effects. A control level is not air pressure.",
+      "source_start": 40.168
+    },
+    {
+      "id": 9,
+      "start": 48.2,
+      "original_end": 52.752,
+      "duration": 5.3185487528344675,
+      "end": 53.51854875283447,
+      "text": "KneeUp connects a pneumatic brace, sensing records and AI observations.",
+      "source_start": 48.2
+    },
+    {
+      "id": 10,
+      "start": 54.269,
+      "original_end": 58.182,
+      "duration": 4.4136961451247165,
+      "end": 58.682696145124716,
+      "text": "The current website and AI do not send pump-control commands.",
+      "source_start": 54.269
+    },
+    {
+      "id": 11,
+      "start": 60.2,
+      "original_end": 63.649,
+      "duration": 3.4639002267573695,
+      "end": 63.66390022675737,
+      "text": "Now, see how a movement record is created.",
+      "source_start": 60.2
+    },
+    {
+      "id": 12,
+      "start": 64.558,
+      "original_end": 70.644,
+      "duration": 6.063718820861678,
+      "end": 70.62171882086169,
+      "text": "Today's task follows a team demonstration script, using synthetic EMG data.",
+      "source_start": 64.558
+    },
+    {
+      "id": 13,
+      "start": 71.553,
+      "original_end": 74.791,
+      "duration": 4.543764172335601,
+      "end": 76.0967641723356,
+      "text": "Camera and EMG inputs each retain their own source labels.",
+      "source_start": 71.553
+    },
+    {
+      "id": 14,
+      "start": 76.2,
+      "original_end": 80.765,
+      "duration": 4.643582766439909,
+      "end": 80.84358276643991,
+      "text": "Once recording begins, data and events enter the same session.",
+      "source_start": 76.2
+    },
+    {
+      "id": 15,
+      "start": 82.458,
+      "original_end": 86.669,
+      "duration": 4.743673469387755,
+      "end": 87.20167346938776,
+      "text": "This software demonstration uses synthetic data to test the workflow.",
+      "source_start": 82.458
+    },
+    {
+      "id": 16,
+      "start": 88.362,
+      "original_end": 94.006,
+      "duration": 5.718458049886621,
+      "end": 94.08045804988662,
+      "text": "Missing measurements stay not measured. We now manually mark a voluntary end.",
+      "source_start": 88.362
+    },
+    {
+      "id": 17,
+      "start": 96.2,
+      "original_end": 98.889,
+      "duration": 3.283809523809524,
+      "end": 99.48380952380953,
+      "text": "This view shows the current analysis status.",
+      "source_start": 96.2
+    },
+    {
+      "id": 18,
+      "start": 99.52380952380953,
+      "original_end": 104.714,
+      "duration": 6.0535147392290245,
+      "end": 105.57732426303856,
+      "text": "External AI is not configured. Only local rule explanations appear below.",
+      "source_start": 99.494
+    },
+    {
+      "id": 19,
+      "start": 105.61732426303857,
+      "original_end": 110.812,
+      "duration": 6.303356009070295,
+      "end": 111.92068027210887,
+      "text": "Model observations and references remain empty. No model answer is fabricated.",
+      "source_start": 105.318
+    },
+    {
+      "id": 20,
+      "start": 111.96068027210887,
+      "original_end": 116.095,
+      "duration": 4.8585941043083904,
+      "end": 116.81927437641727,
+      "text": "Existing rule explanations retain their input window and data sources.",
+      "source_start": 111.416
+    },
+    {
+      "id": 21,
+      "start": 117.2,
+      "original_end": 122.625,
+      "duration": 5.578730158730159,
+      "end": 122.77873015873016,
+      "text": "Switch to the professional view, inspect the same record, and mark it reviewed.",
+      "source_start": 117.2
+    },
+    {
+      "id": 22,
+      "start": 123.349,
+      "original_end": 127.814,
+      "duration": 5.313514739229025,
+      "end": 128.66251473922904,
+      "text": "Back in the user view, this confirmation still belongs to the original session.",
+      "source_start": 123.349
+    },
+    {
+      "id": 23,
+      "start": 128.70251473922903,
+      "original_end": 131.976,
+      "duration": 3.6988208616780045,
+      "end": 132.40133560090703,
+      "text": "The demonstration switches roles on the same computer.",
+      "source_start": 128.538
+    },
+    {
+      "id": 24,
+      "start": 133.2,
+      "original_end": 135.594,
+      "duration": 2.824036281179138,
+      "end": 136.02403628117912,
+      "text": "Every observation should have a source.",
+      "source_start": 133.2
+    },
+    {
+      "id": 25,
+      "start": 136.542,
+      "original_end": 141.03,
+      "duration": 5.84843537414966,
+      "end": 142.39043537414966,
+      "text": "The voluntary end is manually annotated. A person must explain the reason.",
+      "source_start": 136.542
+    },
+    {
+      "id": 26,
+      "start": 142.43043537414965,
+      "original_end": 145.752,
+      "duration": 3.813877551020408,
+      "end": 146.24431292517005,
+      "text": "The system does not infer fatigue from this event alone.",
+      "source_start": 141.978
+    },
+    {
+      "id": 27,
+      "start": 147.2,
+      "original_end": 151.31,
+      "duration": 5.148344671201814,
+      "end": 152.3483446712018,
+      "text": "Existing smart knee braces already connect users with professional services.",
+      "source_start": 147.2
+    },
+    {
+      "id": 28,
+      "start": 152.3883446712018,
+      "original_end": 158.687,
+      "duration": 5.798321995464852,
+      "end": 158.18666666666664,
+      "text": "We need to validate how much assistance pneumatics provide, and how much wearing burden they add.",
+      "source_start": 152.323
+    },
+    {
+      "id": 29,
+      "start": 160.2,
+      "original_end": 163.987,
+      "duration": 3.9537414965986395,
+      "end": 164.15374149659863,
+      "text": "We are seeking one organisation and one professional lead.",
+      "source_start": 160.2
+    },
+    {
+      "id": 30,
+      "start": 164.317,
+      "original_end": 169.521,
+      "duration": 4.638412698412698,
+      "end": 168.95541269841272,
+      "text": "We propose a four-week user-experience pilot with ten participants.",
+      "source_start": 164.317
+    },
+    {
+      "id": 31,
+      "start": 169.851,
+      "original_end": 174.37,
+      "duration": 6.02843537414966,
+      "end": 175.87943537414966,
+      "text": "Pneumatic-assistance effects need separate validation. Recruitment has not begun.",
+      "source_start": 169.851
+    },
+    {
+      "id": 32,
+      "start": 175.91943537414966,
+      "original_end": 178.103,
+      "duration": 3.9840816326530613,
+      "end": 179.90351700680273,
+      "text": "KneeUp. Keep walking the paths you choose.",
+      "source_start": 175.2
+    }
+  ],
+  "changes": [
+    {
+      "scene_start": 0,
+      "original": "膝望",
+      "english": "KneeUp",
+      "box": [
+        155,
+        47,
+        234,
+        92
+      ]
+    },
+    {
+      "scene_start": 0,
+      "original": "气通AIR-FLOW-Knee+",
+      "english": "AIR-FLOW Knee+",
+      "box": [
+        156,
+        97,
+        356,
+        126
+      ]
+    },
+    {
+      "scene_start": 0,
+      "original": "继续走",
+      "english": "Keep walking",
+      "box": [
+        155,
+        193,
+        335,
+        262
+      ]
+    },
+    {
+      "scene_start": 0,
+      "original": "自己想走的路",
+      "english": "the paths you choose",
+      "box": [
+        165,
+        268,
+        500,
+        326
+      ]
+    },
+    {
+      "scene_start": 0,
+      "original": "面向60-75岁、仍能自主行动的人",
+      "english": "For independently mobile adults aged 60–75",
+      "box": [
+        161,
+        380,
+        505,
+        408
+      ]
+    },
+    {
+      "scene_start": 0,
+      "original": "62岁的志远，希望继续走熟悉的山路。",
+      "english": "Zhiyuan, 62, wants to keep hiking familiar trails.",
+      "box": [
+        159,
+        438,
+        534,
+        469
+      ]
+    },
+    {
+      "scene_start": 0,
+      "original": "志远为演示人物",
+      "english": "Zhiyuan is a fictional demonstration character",
+      "box": [
+        160,
+        484,
+        279,
+        509
+      ]
+    },
+    {
+      "scene_start": 0,
+      "original": "设计渲染",
+      "english": "Design render",
+      "box": [
+        1058,
+        551,
+        1130,
+        579
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "气动护膝、传感记录与AI观察",
+      "english": "Pneumatic support, sensing records and AI observations",
+      "box": [
+        159,
+        46,
+        650,
+        89
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "气动护膝",
+      "english": "Pneumatic brace",
+      "box": [
+        712,
+        146,
+        828,
+        188
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "探索动作辅助",
+      "english": "Exploring movement assistance",
+      "box": [
+        714,
+        196,
+        841,
+        224
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "台架响应独立核验",
+      "english": "Bench response verified separately",
+      "box": [
+        714,
+        220,
+        883,
+        251
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "传感记录",
+      "english": "Sensing records",
+      "box": [
+        713,
+        280,
+        826,
+        318
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "肌电与摄像头观察分别标明来源",
+      "english": "EMG and camera observations have separate source labels",
+      "box": [
+        714,
+        326,
+        1002,
+        353
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "AI观察",
+      "english": "AI observations",
+      "box": [
+        712,
+        410,
+        808,
+        446
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "团队既有原型影像",
+      "english": "Existing team prototype footage",
+      "box": [
+        156,
+        462,
+        305,
+        489
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "解释记录，并留下复核依据",
+      "english": "Explain records and retain evidence for review",
+      "box": [
+        713,
+        455,
+        963,
+        485
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "当前联动待验收",
+      "english": "Current integration awaits verification",
+      "box": [
+        156,
+        493,
+        277,
+        521
+      ]
+    },
+    {
+      "scene_start": 48,
+      "original": "气动行动辅助原型",
+      "english": "Pneumatic mobility-assistance prototype",
+      "box": [
+        156,
+        531,
+        317,
+        560
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "膝望·AIR-FLOWKnee+",
+      "english": "KneeUp · AIR-FLOW Knee+",
+      "box": [
+        169,
+        22,
+        300,
+        44
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "继续走自己想走的路",
+      "english": "Keep walking the paths you choose",
+      "box": [
+        168,
+        35,
+        254,
+        59
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "用户端",
+      "english": "User",
+      "box": [
+        318,
+        28,
+        361,
+        51
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "专业端",
+      "english": "Professional",
+      "box": [
+        369,
+        29,
+        405,
+        49
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "日常行动",
+      "english": "Everyday mobility",
+      "box": [
+        658,
+        28,
+        708,
+        50
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "开始记录",
+      "english": "Start recording",
+      "box": [
+        721,
+        28,
+        770,
+        50
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "我的记录",
+      "english": "My records",
+      "box": [
+        784,
+        28,
+        833,
+        50
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "实物未连接",
+      "english": "Hardware not connected",
+      "box": [
+        1082,
+        29,
+        1144,
+        48
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "实物未连接·当前电脑共享一份会话：摄像头与肌电分别标记来源",
+      "english": "Hardware disconnected · One session on this computer; camera and EMG sources labelled separately",
+      "box": [
+        130,
+        76,
+        382,
+        97
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "开始记录→",
+      "english": "Start recording →",
+      "box": [
+        1090,
+        76,
+        1147,
+        98
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "膝望/MOBILITYLONGEVITY",
+      "english": "KneeUp / MOBILITY LONGEVITY",
+      "box": [
+        169,
+        146,
+        334,
+        166
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "继续走",
+      "english": "Keep walking",
+      "box": [
+        166,
+        176,
+        316,
+        238
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "自己想走的路。",
+      "english": "the paths you choose.",
+      "box": [
+        175,
+        240,
+        463,
+        294
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "膝望是一套面向中老年人的气动行动辅助原型，将护膝、传感记录与AI观",
+      "english": "KneeUp is a pneumatic mobility prototype for older adults, connecting the brace, sensing records",
+      "box": [
+        167,
+        323,
+        600,
+        346
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "志远·62岁·演示人物，非真实个案",
+      "english": "Zhiyuan · 62 · Fictional demonstration character",
+      "box": [
+        757,
+        333,
+        892,
+        353
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "察连接起来。",
+      "english": "and AI observations.",
+      "box": [
+        166,
+        344,
+        248,
+        372
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "周末，还想走",
+      "english": "This weekend, keep hiking",
+      "box": [
+        751,
+        370,
+        904,
+        404
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "记录今天这一次→",
+      "english": "Record today's movement →",
+      "box": [
+        182,
+        416,
+        274,
+        437
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "查看我的记录",
+      "english": "View my records",
+      "box": [
+        301,
+        416,
+        372,
+        437
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "那条熟悉的山路。",
+      "english": "those familiar trails.",
+      "box": [
+        750,
+        407,
+        939,
+        441
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "60-75岁·仍能自主行动·从日常行动开始",
+      "english": "Ages 60–75 · Independently mobile · Start with everyday movement",
+      "box": [
+        168,
+        459,
+        350,
+        479
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "这个生活目标，先从今天的一次居家动作记录开始。",
+      "english": "Begin working towards that goal with one movement record at home today.",
+      "box": [
+        750,
+        456,
+        1000,
+        477
+      ]
+    },
+    {
+      "scene_start": 60,
+      "original": "一个生活目标，三个位置",
+      "english": "One life goal, three settings",
+      "box": [
+        133,
+        547,
+        355,
+        577
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "膝望·AIR-FLOWKnee+",
+      "english": "KneeUp · AIR-FLOW Knee+",
+      "box": [
+        115,
+        8,
+        253,
+        34
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "用户端",
+      "english": "User",
+      "box": [
+        272,
+        17,
+        314,
+        39
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "专业端",
+      "english": "Professional",
+      "box": [
+        322,
+        18,
+        360,
+        37
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "日常行动",
+      "english": "Everyday mobility",
+      "box": [
+        649,
+        17,
+        697,
+        38
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "开始记录",
+      "english": "Start recording",
+      "box": [
+        710,
+        17,
+        761,
+        39
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "我的记录",
+      "english": "My records",
+      "box": [
+        776,
+        17,
+        825,
+        38
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "合成演示·非",
+      "english": "Synthetic demo · Not measured",
+      "box": [
+        1108,
+        16,
+        1180,
+        37
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "继续走自己想走的路",
+      "english": "Keep walking the paths you choose",
+      "box": [
+        117,
+        26,
+        203,
+        45
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "感知",
+      "english": "Sensing",
+      "box": [
+        826,
+        75,
+        855,
+        95
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "滤波数值21.52（非百分比）",
+      "english": "Filtered value 21.52 (not a percentage)",
+      "box": [
+        826,
+        95,
+        942,
+        115
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "规则判断",
+      "english": "Rule decision",
+      "box": [
+        824,
+        121,
+        874,
+        143
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "21.52<66.00·规则阔值",
+      "english": "21.52 < 66.00 · Rule threshold",
+      "box": [
+        825,
+        142,
+        936,
+        162
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "控制器输出",
+      "english": "Controller output",
+      "box": [
+        825,
+        167,
+        883,
+        189
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "A5=HIGH（合成演示）",
+      "english": "A5=HIGH (synthetic demo)",
+      "box": [
+        825,
+        188,
+        927,
+        209
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "物理结果",
+      "english": "Physical result",
+      "box": [
+        824,
+        214,
+        874,
+        236
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "气泵动作、气压力与助力大小：来接入反馈",
+      "english": "Pump action, air pressure and actual assistance: no feedback connected",
+      "box": [
+        826,
+        235,
+        1009,
+        256
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "现在",
+      "english": "Now",
+      "box": [
+        720,
+        248,
+        748,
+        269
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "328个采样点·0行未识别",
+      "english": "328 samples · 0 unrecognised lines",
+      "box": [
+        138,
+        275,
+        251,
+        295
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "调值66.00·模拟值",
+      "english": "Threshold 66.00 · Simulated value",
+      "box": [
+        665,
+        276,
+        750,
+        295
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "当前全部曲线和状态均为合成演示，没有连接实体设备。",
+      "english": "All curves and states are synthetic demonstrations. No physical device is connected.",
+      "box": [
+        808,
+        275,
+        1008,
+        295
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "仅连接实际收到的采样点，不补点、不预测。原固件包含1秒等待，触发后另有4秒等待：这不是连续500Hz的肌电波形。",
+      "english": "Only received samples are joined, without filling or prediction. Firmware waits 1 s, then 4 s after triggering; this is not continuous 500 Hz EMG.",
+      "box": [
+        138,
+        299,
+        662,
+        320
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "AI能解释什么？",
+      "english": "What can AI explain?",
+      "box": [
+        137,
+        395,
+        259,
+        427
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "规则解料/AI未连接",
+      "english": "Rule explanation / AI disconnected",
+      "box": [
+        1055,
+        397,
+        1136,
+        416
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "AlAdaptive MobilityAssistSystem·Assist，notreplace。本阶段仅观察与建议，尚未完成Al物理控制闭环。",
+      "english": "AI Adaptive Mobility Assist System · Assist, not replace. Observation and advice only; no closed loop of AI physical control.",
+      "box": [
+        137,
+        435,
+        618,
+        459
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "模型未配置：请队友按README在服务端填写.enV并重启。",
+      "english": "Model not configured: fill in the server .env following README and restart.",
+      "box": [
+        137,
+        462,
+        399,
+        484
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "发送字段与授权范围",
+      "english": "Fields to send and permission scope",
+      "box": [
+        138,
+        489,
+        244,
+        510
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "我确认上方模型服务，并同意手动发送所列窗口摘要",
+      "english": "I confirm the model service and manually authorise sending the listed window summary",
+      "box": [
+        141,
+        518,
+        386,
+        540
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "分析当前窗口",
+      "english": "Analyse current window",
+      "box": [
+        149,
+        557,
+        217,
+        578
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "重新检查模型配置",
+      "english": "Recheck model settings",
+      "box": [
+        235,
+        557,
+        321,
+        578
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "导出AI历史JSON",
+      "english": "Export AI history JSON",
+      "box": [
+        342,
+        558,
+        431,
+        576
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "Partially occluded source heading/status",
+      "english": "EMG signal",
+      "box": [
+        138,
+        47,
+        750,
+        67
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "Partially occluded source heading/status",
+      "english": "Input-to-output chain",
+      "box": [
+        798,
+        47,
+        1158,
+        67
+      ]
+    },
+    {
+      "scene_start": 76,
+      "original": "Partially occluded source heading/status",
+      "english": "Model unconfigured · Rule explanation / AI disconnected",
+      "box": [
+        138,
+        588,
+        603,
+        610
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "国",
+      "english": "",
+      "box": [
+        144,
+        4,
+        161,
+        18
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "我确认上方模型服务，并同意手动发送所列窗口摘要",
+      "english": "I confirm the model service and manually authorise sending the listed window summary",
+      "box": [
+        153,
+        1,
+        386,
+        22
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "分析当前窗口",
+      "english": "Analyse current window",
+      "box": [
+        149,
+        38,
+        217,
+        60
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "重新检查模型配置",
+      "english": "Recheck model settings",
+      "box": [
+        236,
+        38,
+        321,
+        60
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "导出AI历史JSON",
+      "english": "Export AI history JSON",
+      "box": [
+        341,
+        38,
+        432,
+        60
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "模型未配置·规则解释/AI未连接",
+      "english": "Model unconfigured · Rule explanation / AI disconnected",
+      "box": [
+        138,
+        72,
+        288,
+        93
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "待分析窗口：合成输入·非实测·2026/9/516：51:09至2026/9/516：51:42·327个新样本·会话session-1788598269223-1·未采集人工基线",
+      "english": "Window: synthetic, not measured · 2026/9/5 16:51:09–16:51:42 · 327 new samples · session-1788598269223-1 · No manual baseline",
+      "box": [
+        138,
+        97,
+        764,
+        120
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "工程门槛（非医学标准）：最近60秒、至少5点且跨度4秒：样本/帧年龄≤7秒；调用间隔≥10秒。",
+      "english": "Engineering gates (not clinical criteria): last 60 s, at least 5 points spanning 4 s; sample/frame age ≤7 s; call interval ≥10 s.",
+      "box": [
+        138,
+        125,
+        569,
+        146
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "当前可发送的窗口摘要（程序计算）",
+      "english": "Current sendable window summary (computed)",
+      "box": [
+        136,
+        150,
+        304,
+        172
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "模型观察",
+      "english": "Model observations",
+      "box": [
+        138,
+        182,
+        190,
+        205
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "等待有效模型结果",
+      "english": "Awaiting a valid model result",
+      "box": [
+        138,
+        210,
+        229,
+        232
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "下一步建议",
+      "english": "Next-step suggestions",
+      "box": [
+        138,
+        244,
+        199,
+        265
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "尚无当前模型建议",
+      "english": "No current model suggestions",
+      "box": [
+        138,
+        272,
+        230,
+        294
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "数据依据",
+      "english": "Data evidence",
+      "box": [
+        138,
+        304,
+        190,
+        327
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "暂无模型引用",
+      "english": "No model references",
+      "box": [
+        148,
+        339,
+        211,
+        361
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "暂无事件引用。",
+      "english": "No event references",
+      "box": [
+        138,
+        377,
+        214,
+        401
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "交给专业人员复核的问题",
+      "english": "Questions for professional review",
+      "box": [
+        138,
+        410,
+        261,
+        431
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "尚无模型复核问题。",
+      "english": "No model-generated review questions",
+      "box": [
+        138,
+        435,
+        233,
+        457
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "未应用到硬件",
+      "english": "Not applied to hardware",
+      "box": [
+        138,
+        463,
+        205,
+        484
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "本次模型结果对应的固定输入窗口",
+      "english": "Fixed input window for this model result",
+      "box": [
+        138,
+        488,
+        300,
+        510
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "规则解释/AI未连接：327个新样本：滤波数值范围21.00~98.86，均值47.66.储值66为遥测上报值。没有人工标注基线。",
+      "english": "Rule explanation / AI disconnected: 327 new samples; filtered range 21.00–98.86, mean 47.66. Threshold 66 is reported telemetry. No manual baseline.",
+      "box": [
+        149,
+        529,
+        599,
+        550
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "建议未应用到硬件，也不是此前固件响应的原因。模型文本仍需人工核对。",
+      "english": "Suggestions were not applied to hardware and did not cause the earlier firmware response. Model text still requires human review.",
+      "box": [
+        137,
+        580,
+        453,
+        603
+      ]
+    },
+    {
+      "scene_start": 96,
+      "original": "本次模型输入限于A0单路稀疏滤波摘要与上述固定事件：不含摄像头角度。无人工标注基线、压力或实际辅助力。不能推新疲劳、肌力、坡度、上下楼或临床效果。A5是控制输出。人工主动结束只表示操作者标记，不推断结束原因。本次",
+      "english": "Model input: sparse filtered A0 summaries and the fixed events above only. No camera angle, manual baseline, pressure or actual assistance. No inference of fatigue, strength, slope, stairs or clinical effects. A5 is a control output. Manual end is an operator label; its cause is not inferred.",
+      "box": [
+        138,
+        565,
+        1140,
+        582
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "2026/9/516:51:09·已结束：主动结束（人工标注）·版本480",
+      "english": "2026/9/5 16:51:09 · Ended voluntarily (manual annotation) · Version 480",
+      "box": [
+        138,
+        50,
+        421,
+        71
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "查看会话",
+      "english": "View session",
+      "box": [
+        876,
+        42,
+        926,
+        64
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "2026/9/516：51:09·合成输入·非实测",
+      "english": "2026/9/5 16:51:09 · Synthetic input, not measured",
+      "box": [
+        934,
+        42,
+        1111,
+        64
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "本次来源：合成输入·非实测：录像回放·非实时，压力、实际辅助力与泵状态：未测得。",
+      "english": "Sources: synthetic input, not measured; recorded video, not live. Pressure, actual assistance and pump state: not measured.",
+      "box": [
+        148,
+        100,
+        464,
+        120
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "肌电采样点",
+      "english": "EMG samples",
+      "box": [
+        138,
+        177,
+        196,
+        200
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "视觉观察记录（含缺失）",
+      "english": "Visual observations (including missing data)",
+      "box": [
+        475,
+        177,
+        583,
+        199
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "时间线事件",
+      "english": "Timeline events",
+      "box": [
+        812,
+        176,
+        870,
+        199
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "专业端已查看",
+      "english": "Viewed by professional",
+      "box": [
+        154,
+        230,
+        239,
+        257
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "已查看合成肌电和本地回放，角度未测得。外部AI未配置，实物与气动响应待现场核验。",
+      "english": "Synthetic EMG and local replay reviewed; angle not measured. External AI not configured. Physical integration and pneumatic response await verification.",
+      "box": [
+        154,
+        259,
+        591,
+        283
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "2026/9/516：51:43·专业端明确点击确认：复核内容版本479",
+      "english": "2026/9/5 16:51:43 · Professional explicitly confirmed review of content version 479",
+      "box": [
+        154,
+        287,
+        407,
+        307
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "复核备注（仅保存在本页记录，不发给模型）",
+      "english": "Review note (stored in this page's record; not sent to the model)",
+      "box": [
+        138,
+        336,
+        346,
+        357
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "已查看合成肌电和本地回放，角度未测得。外部AI未配置，实物与气动响应待现场核验。",
+      "english": "Synthetic EMG and local replay reviewed; angle not measured. External AI not configured. Physical integration and pneumatic response await verification.",
+      "box": [
+        150,
+        370,
+        586,
+        393
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "已查看这份记录",
+      "english": "I have viewed this record",
+      "box": [
+        150,
+        430,
+        225,
+        452
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "需要补充记录",
+      "english": "Additional records needed",
+      "box": [
+        246,
+        430,
+        312,
+        452
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "回到用户端查看结果→",
+      "english": "Return to the user view →",
+      "box": [
+        333,
+        430,
+        437,
+        452
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "此操作确认记录已被查看，不代表临床结论或设备验收。",
+      "english": "This confirms that the record was viewed; it is not a clinical conclusion or device acceptance.",
+      "box": [
+        139,
+        465,
+        377,
+        486
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "刚才发生了什么？",
+      "english": "What just happened?",
+      "box": [
+        138,
+        540,
+        256,
+        567
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "AI能解释什么？",
+      "english": "What can AI explain?",
+      "box": [
+        645,
+        540,
+        754,
+        567
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "等待有效模型结果",
+      "english": "Awaiting a valid model result",
+      "box": [
+        646,
+        571,
+        757,
+        596
+      ]
+    },
+    {
+      "scene_start": 117,
+      "original": "网页记录事件",
+      "english": "Web recording event",
+      "box": [
+        575,
+        586,
+        631,
+        605
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "我的记录与专业反馈",
+      "english": "My records and professional feedback",
+      "box": [
+        138,
+        4,
+        320,
+        34
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "专业端已查看",
+      "english": "Viewed by professional",
+      "box": [
+        1078,
+        3,
+        1136,
+        25
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "用户端与专业端查看当前电脑里的同一份记录。完整数据仅保留在本页内存，刷新前请导出。",
+      "english": "User and professional views share one record on this computer. Full data remains in page memory; export before refreshing.",
+      "box": [
+        138,
+        47,
+        529,
+        68
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "2026/9/516:51:09·已结束：主动结束（人工标注）·版本480",
+      "english": "2026/9/5 16:51:09 · Ended voluntarily (manual annotation) · Version 480",
+      "box": [
+        138,
+        108,
+        422,
+        128
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "查看会话",
+      "english": "View session",
+      "box": [
+        876,
+        100,
+        927,
+        121
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "2026/9/516:51:09·合成输入·非实测",
+      "english": "2026/9/5 16:51:09 · Synthetic input, not measured",
+      "box": [
+        933,
+        100,
+        1112,
+        121
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "本次来源：合成输入·非实测：录像回放·非实时，压力、实际辅助力与泵状态：未测得。",
+      "english": "Sources: synthetic input, not measured; recorded video, not live. Pressure, actual assistance and pump state: not measured.",
+      "box": [
+        149,
+        157,
+        464,
+        178
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "肌电采样点",
+      "english": "EMG samples",
+      "box": [
+        137,
+        236,
+        194,
+        257
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "视觉观察记录（含缺失）",
+      "english": "Visual observations (including missing data)",
+      "box": [
+        475,
+        236,
+        583,
+        257
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "时间线事件",
+      "english": "Timeline events",
+      "box": [
+        813,
+        235,
+        870,
+        257
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "专业端已查看",
+      "english": "Viewed by professional",
+      "box": [
+        155,
+        290,
+        239,
+        314
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "已查看合成肌电和本地回放，角度未测得。外部AI未配置，实物与气动响应待现场核验。",
+      "english": "Synthetic EMG and local replay reviewed; angle not measured. External AI not configured. Physical integration and pneumatic response await verification.",
+      "box": [
+        155,
+        316,
+        591,
+        340
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "2026/9/516:51:43·专业端明确点击确认：复核内容版本479",
+      "english": "2026/9/5 16:51:43 · Professional explicitly confirmed review of content version 479",
+      "box": [
+        154,
+        343,
+        407,
+        366
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "刚才发生了什么？",
+      "english": "What just happened?",
+      "box": [
+        138,
+        410,
+        255,
+        434
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "AI能解释什么？",
+      "english": "What can AI explain?",
+      "box": [
+        645,
+        408,
+        753,
+        435
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "等待有效模型结果",
+      "english": "Awaiting a valid model result",
+      "box": [
+        646,
+        439,
+        757,
+        464
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "同页记录事件",
+      "english": "Same-page recording event",
+      "box": [
+        573,
+        452,
+        633,
+        475
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "网页记录结束：主动结束（人工标注）",
+      "english": "Web recording ended voluntarily (manual annotation)",
+      "box": [
+        138,
+        475,
+        314,
+        496
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "尚未调用模型。配置并授权后，可在采集页分析当前记录：未连接时明确显示规则解释。",
+      "english": "Model not called. After configuration and consent, analyse the current record on the collection page. When disconnected, rule explanations are labelled explicitly.",
+      "box": [
+        646,
+        468,
+        1048,
+        491
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "人工标注",
+      "english": "Manual annotation",
+      "box": [
+        588,
+        535,
+        632,
+        557
+      ]
+    },
+    {
+      "scene_start": 123,
+      "original": "主动结束（操作者人工标注）",
+      "english": "Voluntary end (manually annotated by the operator)",
+      "box": [
+        137,
+        557,
+        273,
+        578
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "每条AI观察都要有出处",
+      "english": "Every AI observation needs a source",
+      "box": [
+        158,
+        48,
+        561,
+        91
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "观察",
+      "english": "Observation",
+      "box": [
+        154,
+        154,
+        209,
+        189
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "依据",
+      "english": "Evidence",
+      "box": [
+        718,
+        154,
+        773,
+        188
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "“本次记录",
+      "english": "“This recording",
+      "box": [
+        159,
+        208,
+        351,
+        265
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "事件：主动结束",
+      "english": "Event: voluntary end",
+      "box": [
+        720,
+        209,
+        898,
+        244
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "来源：人工标注",
+      "english": "Source: manual annotation",
+      "box": [
+        720,
+        240,
+        897,
+        271
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "由用户主动结束”",
+      "english": "was ended by the user.”",
+      "box": [
+        160,
+        262,
+        462,
+        306
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "时间：定位到当前记录",
+      "english": "Time: located in the current record",
+      "box": [
+        719,
+        268,
+        967,
+        299
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "示例口径",
+      "english": "Example wording",
+      "box": [
+        158,
+        354,
+        235,
+        383
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "局限",
+      "english": "Limitations",
+      "box": [
+        718,
+        381,
+        772,
+        416
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "结束原因需要人补充",
+      "english": "A person must explain why the recording ended",
+      "box": [
+        720,
+        429,
+        931,
+        461
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "缺失测量保持“未测得”",
+      "english": "Missing measurements stay ‘not measured’",
+      "box": [
+        720,
+        457,
+        950,
+        488
+      ]
+    },
+    {
+      "scene_start": 133,
+      "original": "结果页明确区分：模型生成、规则说明、不可用",
+      "english": "Results distinguish model output, rule explanations and unavailable data",
+      "box": [
+        157,
+        535,
+        566,
+        563
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "现有智能护膝与膝望的验证重点",
+      "english": "Existing smart braces and KneeUp's validation priorities",
+      "box": [
+        159,
+        49,
+        663,
+        89
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "方案",
+      "english": "Option",
+      "box": [
+        160,
+        153,
+        219,
+        190
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "公开介绍或当前范围",
+      "english": "Public description or current scope",
+      "box": [
+        359,
+        156,
+        555,
+        186
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "证据边界",
+      "english": "Evidence boundary",
+      "box": [
+        750,
+        155,
+        844,
+        187
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "居家练习、传感反馈",
+      "english": "Home exercise and sensor feedback",
+      "box": [
+        360,
+        211,
+        562,
+        242
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "官方产品介绍",
+      "english": "Official product description",
+      "box": [
+        751,
+        222,
+        891,
+        256
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "患者端与专业服务入口",
+      "english": "Patient access and professional services",
+      "box": [
+        360,
+        238,
+        583,
+        268
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "智能护膝、动作记录",
+      "english": "Smart brace and movement records",
+      "box": [
+        359,
+        296,
+        562,
+        327
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "官方产品介绍",
+      "english": "Official product description",
+      "box": [
+        750,
+        307,
+        891,
+        341
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "远程康复管理",
+      "english": "Remote rehabilitation management",
+      "box": [
+        359,
+        323,
+        497,
+        351
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "气动辅助原型",
+      "english": "Pneumatic-assistance prototype",
+      "box": [
+        360,
+        380,
+        499,
+        411
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "助力效果、使用负担",
+      "english": "Assistance effect and wearing burden",
+      "box": [
+        751,
+        380,
+        954,
+        411
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "膝望",
+      "english": "KneeUp",
+      "box": [
+        162,
+        391,
+        218,
+        426
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "传感记录与AI观察",
+      "english": "Sensing records and AI observations",
+      "box": [
+        359,
+        405,
+        552,
+        438
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "需要自己的验证",
+      "english": "Requires our own validation",
+      "box": [
+        750,
+        407,
+        912,
+        438
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "我们要验证",
+      "english": "What we need to validate",
+      "box": [
+        156,
+        480,
+        265,
+        512
+      ]
+    },
+    {
+      "scene_start": 147,
+      "original": "气动结构能带来多少帮助，又增加多少穿戴负担",
+      "english": "How much assistance can pneumatics provide, and how much wearing burden does it add?",
+      "box": [
+        156,
+        516,
+        689,
+        553
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "第一轮合作：四周使用体验试点",
+      "english": "First collaboration: a four-week user-experience pilot",
+      "box": [
+        158,
+        48,
+        676,
+        91
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "家机构",
+      "english": "Organisation",
+      "box": [
+        155,
+        246,
+        238,
+        283
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "位专业负责人",
+      "english": "Professional lead",
+      "box": [
+        419,
+        247,
+        572,
+        282
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "位参与者 （建议）",
+      "english": "Participants (proposed)",
+      "box": [
+        812,
+        247,
+        997,
+        282
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "关注四项指标",
+      "english": "Four measures to track",
+      "box": [
+        156,
+        336,
+        326,
+        373
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "记录完整度",
+      "english": "Record completeness",
+      "box": [
+        155,
+        401,
+        285,
+        435
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "穿戴负担",
+      "english": "Wearing burden",
+      "box": [
+        669,
+        400,
+        777,
+        435
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "专业审阅耗时",
+      "english": "Professional review time",
+      "box": [
+        156,
+        428,
+        310,
+        466
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "继续使用意愿",
+      "english": "Willingness to continue",
+      "box": [
+        670,
+        430,
+        824,
+        465
+      ]
+    },
+    {
+      "scene_start": 160,
+      "original": "提议试点，尚未招募。气动助力效果另设验证。",
+      "english": "Proposed pilot; recruitment has not begun. Pneumatic-assistance effects require separate validation.",
+      "box": [
+        157,
+        531,
+        537,
+        559
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "日常行动",
+      "english": "Everyday mobility",
+      "box": [
+        162,
+        71,
+        342,
+        123
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "是第一步",
+      "english": "is the first step",
+      "box": [
+        157,
+        125,
+        341,
+        177
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "日常行动",
+      "english": "Everyday mobility",
+      "box": [
+        157,
+        250,
+        270,
+        289
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "首个产品入口",
+      "english": "The first product entry point",
+      "box": [
+        156,
+        291,
+        284,
+        323
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "术后随访",
+      "english": "Postoperative follow-up",
+      "box": [
+        155,
+        346,
+        269,
+        385
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "在专业支持下延伸",
+      "english": "An extension with professional support",
+      "box": [
+        155,
+        386,
+        326,
+        420
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "徒步与户外",
+      "english": "Hiking and outdoor activity",
+      "box": [
+        156,
+        443,
+        294,
+        478
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "用户希望保留的生活",
+      "english": "The life users want to retain",
+      "box": [
+        156,
+        485,
+        344,
+        513
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "寻找首个社区康复合作伙伴",
+      "english": "Seeking a first community rehabilitation partner",
+      "box": [
+        155,
+        543,
+        395,
+        574
+      ]
+    },
+    {
+      "scene_start": 175,
+      "original": "团队既有气囊样件影像",
+      "english": "Existing team air-cell sample footage",
+      "box": [
+        970,
+        545,
+        1128,
+        569
+      ]
+    }
+  ],
+  "scope_note": "Historical reference-project software screenshots, not a claim about functions in the current static website"
+}

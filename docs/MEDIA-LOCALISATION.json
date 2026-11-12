@@ -1,0 +1,1878 @@
+[
+  {
+    "source": "arch.png",
+    "english": "arch-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "b52f3d3def9912250695cb8a60718539bfc154a5cf947d8af5d21b95761c62e1",
+    "changes": [
+      {
+        "source_text": "核心IP=AI数据层",
+        "english": "Core: AI data layer",
+        "box": [
+          2798.64501953125,
+          119.5,
+          278.8387451171875,
+          48.357139587402344
+        ]
+      },
+      {
+        "source_text": "合成数据演示·AlldataSIMULATED",
+        "english": "Synthetic demo · All data SIMULATED",
+        "box": [
+          3183.8062744140625,
+          123.35713958740234,
+          501.4195556640625,
+          42.57143020629883
+        ]
+      },
+      {
+        "source_text": "全链路软件闭环",
+        "english": "End-to-End Software Loop",
+        "box": [
+          133.48386764526367,
+          160.0,
+          594.3225440979004,
+          81.14286041259766
+        ]
+      },
+      {
+        "source_text": "医生端→患者端→硬件安全状态机→AI数据层·去掉AI数据层，闭环不成立一这就是本项目的AI",
+        "english": "Clinician → patient → local safety state machine → AI data layer. The AI layer supports the proposed software loop.",
+        "box": [
+          125.74192810058594,
+          281.5,
+          1701.4193267822266,
+          48.357139587402344
+        ]
+      },
+      {
+        "source_text": "同步处方·下发安全参数",
+        "english": "Synchronise plan and safety parameters",
+        "box": [
+          820.5806274414062,
+          403.0,
+          344.6451110839844,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "穿戴·执行居家训练",
+        "english": "Wear the brace and train at home",
+        "box": [
+          1776.7095947265625,
+          403.0,
+          288.5162353515625,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "SEMG/腔压/角度实时信号流",
+        "english": "sEMG / pressure / angle signal stream",
+        "box": [
+          2624.4514770507812,
+          403.0,
+          445.2904052734375,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "核心IP·CORE",
+        "english": "CORE",
+        "box": [
+          3398.64501953125,
+          485.9285583496094,
+          255.6129150390625,
+          48.35716247558594
+        ]
+      },
+      {
+        "source_text": "医生端·康复师",
+        "english": "Clinician / therapist",
+        "box": [
+          292.19354248046875,
+          551.5,
+          319.4838562011719,
+          56.071441650390625
+        ]
+      },
+      {
+        "source_text": "患者端",
+        "english": "Patient interface",
+        "box": [
+          1219.2903137207031,
+          553.4285583496094,
+          145.29031372070312,
+          59.928558349609375
+        ]
+      },
+      {
+        "source_text": "AIR-FLOWKnee+硬件",
+        "english": "AIR-FLOW Knee+ hardware",
+        "box": [
+          2146.3870849609375,
+          551.5,
+          478.19354248046875,
+          59.928558349609375
+        ]
+      },
+      {
+        "source_text": "共享Web/AI数据层",
+        "english": "Shared Web / AI data layer",
+        "box": [
+          3075.419189453125,
+          555.3571166992188,
+          437.54833984375,
+          54.14288330078125
+        ]
+      },
+      {
+        "source_text": "初诊与功能评估，建立患者档案",
+        "english": "Initial review and functional assessment; create a profile",
+        "box": [
+          197.35484313964844,
+          738.5714416503906,
+          476.2580261230469,
+          50.285675048828125
+        ]
+      },
+      {
+        "source_text": "每日症状问询：疼痛·肿胀·卡顿·腿软",
+        "english": "Daily symptom check-in: pain, swelling, catching, weakness",
+        "box": [
+          1128.322509765625,
+          744.3571166992188,
+          619.4839477539062,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "采集：SEMG+表面压力+运动姿态",
+        "english": "Acquire sEMG, surface pressure and pose",
+        "box": [
+          2053.4837646484375,
+          738.5714416503906,
+          551.7418823242188,
+          52.2142333984375
+        ]
+      },
+      {
+        "source_text": "生成个人基线（入组后持续演化）",
+        "english": "Build and update a personal baseline",
+        "box": [
+          2984.4514770507812,
+          740.5,
+          482.06439208984375,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "在医生Web创建康复处方：动作·次数·",
+        "english": "Clinician-defined training plan: movements, repetitions,",
+        "box": [
+          201.2258071899414,
+          863.9285583496094,
+          617.5483627319336,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "穿戴护膝并完成接触检查",
+        "english": "Wear the brace and check contact",
+        "box": [
+          1126.3870849609375,
+          863.9285583496094,
+          371.74188232421875,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "本地滤波、校准与异常检测",
+        "english": "Local filtering, calibration and anomaly checks",
+        "box": [
+          2057.3547973632812,
+          863.9285583496094,
+          402.7095947265625,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "识别疲劳、异常偏移和代偿模式",
+        "english": "Identify fatigue, drift and compensation patterns",
+        "box": [
+          2986.3870849609375,
+          863.9285583496094,
+          470.45166015625,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "肌电范围·最大气压·终止条件",
+        "english": "EMG range, maximum pressure and stopping conditions",
+        "box": [
+          199.29031372070312,
+          910.2142333984375,
+          485.9354705810547,
+          48.357208251953125
+        ]
+      },
+      {
+        "source_text": "执行医生指定的居家训练",
+        "english": "Follow the clinician-defined home-training plan",
+        "box": [
+          1124.4515686035156,
+          979.6428833007812,
+          379.4838562011719,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "安全判断：处于医生设定的调节范围内？",
+        "english": "Safety check: within the clinician-defined range?",
+        "box": [
+          2055.4193725585938,
+          979.6428833007812,
+          590.4514770507812,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "实时纠正下发患者端 (声音／视觉／震动）",
+        "english": "Feedback to the patient: sound, visual cues or vibration",
+        "box": [
+          2982.5160522460938,
+          979.6428833007812,
+          627.2256469726562,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "查看AI异常摘要（不逐条查看原始数据）",
+        "english": "Review AI summaries instead of every raw sample",
+        "box": [
+          201.2258071899414,
+          1033.6428833007812,
+          598.1935653686523,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "接收声音/视觉/震动实时纠正",
+        "english": "Receive sound, visual or vibration feedback",
+        "box": [
+          1126.3870849609375,
+          1099.2142333984375,
+          507.225830078125,
+          48.357208251953125
+        ]
+      },
+      {
+        "source_text": "是→控制气泵与分区阀门·增减气囊支撑",
+        "english": "Yes: adjust pump and zone valves for air-cell support",
+        "box": [
+          2084.4514770507812,
+          1089.5714416503906,
+          580.774169921875,
+          52.2142333984375
+        ]
+      },
+      {
+        "source_text": "生成本次训练报告",
+        "english": "Generate the session report",
+        "box": [
+          2980.5806274414062,
+          1095.3571166992188,
+          278.83856201171875,
+          54.14288330078125
+        ]
+      },
+      {
+        "source_text": "调整强度与支撑边界→更新下一周期处方",
+        "english": "Adjust intensity and support limits for the next plan",
+        "box": [
+          201.2258071899414,
+          1151.2856750488281,
+          621.419303894043,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "训练后记录疼痛与舒适度",
+        "english": "Record discomfort and comfort after training",
+        "box": [
+          1126.3870849609375,
+          1218.7856750488281,
+          377.54833984375,
+          48.357208251953125
+        ]
+      },
+      {
+        "source_text": "否·超限→停泵·立即泄气·提示暂停",
+        "english": "No / over limit: stop pump, deflate and suggest a pause",
+        "box": [
+          2088.322509765625,
+          1201.4285583496094,
+          553.677490234375,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "长期趋势与风险分级",
+        "english": "Long-term trends and risk grouping",
+        "box": [
+          2984.4514770507812,
+          1218.7856750488281,
+          309.80645751953125,
+          48.357208251953125
+        ]
+      },
+      {
+        "source_text": "气囊压力传感器验证调节结果",
+        "english": "Use air-cell pressure feedback to verify the adjustment",
+        "box": [
+          2059.2902221679688,
+          1313.2856750488281,
+          435.6129150390625,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "AI异常摘要·医生周报，而非逐条数据",
+        "english": "AI summaries and weekly digests, rather than raw samples",
+        "box": [
+          2984.4514770507812,
+          1342.2142333984375,
+          582.7097778320312,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "1处方=安全边界：气压/肌电阈值均由医生设定",
+        "english": "Plans define safety boundaries: pressure and EMG thresholds",
+        "box": [
+          189.6128921508789,
+          1506.1427917480469,
+          607.870964050293,
+          36.785675048828125
+        ]
+      },
+      {
+        "source_text": "康复从医院走进家里的每一天",
+        "english": "Support the daily journey from hospital to home",
+        "box": [
+          1134.1289672851562,
+          1504.2142333984375,
+          365.9355163574219,
+          42.571533203125
+        ]
+      },
+      {
+        "source_text": "安全状态机本地闭环，AI文本不直接控制气泵",
+        "english": "Safety logic is local; AI text does not directly control the pump",
+        "box": [
+          2065.0966796875,
+          1506.1427917480469,
+          559.4839477539062,
+          36.785675048828125
+        ]
+      },
+      {
+        "source_text": "去掉这层，闭环不成立一这就是本项目的AI",
+        "english": "The AI layer supports the proposed loop",
+        "box": [
+          2994.1289672851562,
+          1506.1427917480469,
+          576.9031372070312,
+          36.785675048828125
+        ]
+      },
+      {
+        "source_text": "回传：训练报告·长期趋势与风险分级·AI异常摘要→医生调整下一周期处方",
+        "english": "Return session reports, trends, risk groups and summaries so the clinician can review the next plan",
+        "box": [
+          1352.8386535644531,
+          1812.7857666015625,
+          1134.3226013183594,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "·合成数据演示·所有数据标注SIMULATED，不含真实患者数据",
+        "english": "Synthetic demonstration · All records labelled SIMULATED · No real patient data",
+        "box": [
+          127.67741012573242,
+          2044.2142333984375,
+          855.6129035949707,
+          42.571533203125
+        ]
+      },
+      {
+        "source_text": "让膝康复从医院走进家庭·AlxOrigin2026Vital·TeamFreeWill",
+        "english": "A knee-support concept connecting hospital and home · AIx Origin 2026 Vital · Team Free Will",
+        "box": [
+          2837.3547973632812,
+          2042.2857666015625,
+          882.7097778320312,
+          44.5
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-01.png",
+    "english": "deck/page-01-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "588a3812dcd6c3bd8b5fcb2037db760b7ca1c5d4f5ff504108154b6718926199",
+    "changes": [
+      {
+        "source_text": "膝望",
+        "english": "",
+        "box": [
+          278.0,
+          123.0,
+          132.0,
+          46.0
+        ]
+      },
+      {
+        "source_text": "活域一生命科学&Healthcare",
+        "english": "Vital — Life Sciences & Healthcare",
+        "box": [
+          72.0,
+          442.0,
+          196.0,
+          21.0
+        ]
+      },
+      {
+        "source_text": "AlxOriginSummit 2026香港Vital赛道",
+        "english": "AIx Origin Summit 2026 · Hong Kong · Vital Track",
+        "box": [
+          68.0,
+          462.0,
+          207.0,
+          24.0
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          276,
+          118,
+          137,
+          58
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-02.png",
+    "english": "deck/page-02-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "b699328ce17dada6ccd89484fc8cef254ee1d9e5d78224d46a9ac8195833d3b3",
+    "changes": [
+      {
+        "source_text": "衰老，从“走路越来越累”开始",
+        "english": "",
+        "box": [
+          291.0,
+          334.0,
+          370.0,
+          33.0
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-03.png",
+    "english": "deck/page-03-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "6861dffbb54c24f004b4bbc5bddae280e1450bfd1029fb1cd7da455b36df5355",
+    "changes": [
+      {
+        "source_text": "它往往从这些细节开始",
+        "english": "",
+        "box": [
+          355.0,
+          161.0,
+          230.0,
+          30.0
+        ]
+      },
+      {
+        "source_text": "上楼越来越依赖扶手",
+        "english": "",
+        "box": [
+          384.0,
+          270.0,
+          172.0,
+          26.0
+        ]
+      },
+      {
+        "source_text": "遇到坡道开始放慢速度",
+        "english": "",
+        "box": [
+          376.0,
+          349.0,
+          194.0,
+          26.0
+        ]
+      },
+      {
+        "source_text": "长距离步行后更容易疲劳",
+        "english": "",
+        "box": [
+          368.0,
+          429.0,
+          211.0,
+          29.0
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-04.png",
+    "english": "deck/page-04-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "aecc1ce4d0384b88b0c81eec3a278a8fc0c66b419cfd1a18ba42ed7921c86134",
+    "changes": [
+      {
+        "source_text": "我们服务谁？",
+        "english": "",
+        "box": [
+          130.0,
+          152.0,
+          139.0,
+          31.0
+        ]
+      },
+      {
+        "source_text": "下肢力量下降，但仍具有自主行动能力的人",
+        "english": "",
+        "box": [
+          403.0,
+          159.0,
+          360.0,
+          26.0
+        ]
+      },
+      {
+        "source_text": "他们不是完全夫能人群，而是：",
+        "english": "",
+        "box": [
+          403.0,
+          264.0,
+          255.0,
+          26.0
+        ]
+      },
+      {
+        "source_text": "银发人群",
+        "english": "",
+        "box": [
+          236.0,
+          286.0,
+          84.0,
+          29.0
+        ]
+      },
+      {
+        "source_text": "·还能独立行走",
+        "english": "",
+        "box": [
+          681.0,
+          315.0,
+          83.0,
+          22.0
+        ]
+      },
+      {
+        "source_text": "·但上楼、上坡、起身开始吃力",
+        "english": "",
+        "box": [
+          680.0,
+          344.0,
+          162.0,
+          23.0
+        ]
+      },
+      {
+        "source_text": "·希望继续旅行、运动、户外活动",
+        "english": "",
+        "box": [
+          681.0,
+          391.0,
+          172.0,
+          20.0
+        ]
+      },
+      {
+        "source_text": "下肢肌力下降人群",
+        "english": "",
+        "box": [
+          157.0,
+          418.0,
+          97.0,
+          21.0
+        ]
+      },
+      {
+        "source_text": "·不愿意过早使用拐杖、轮椅等强医疗化产品",
+        "english": "",
+        "box": [
+          681.0,
+          437.0,
+          228.0,
+          18.0
+        ]
+      },
+      {
+        "source_text": "术后康复人群",
+        "english": "",
+        "box": [
+          168.0,
+          476.0,
+          76.0,
+          21.0
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-05.png",
+    "english": "deck/page-05-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "67723f6ff5053118f3c9be296e93545e54a43e689704f7d8d459c8aecae11663",
+    "changes": [
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-06.png",
+    "english": "deck/page-06-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "b2cb647dac0c15e69faf77b5de3bacd64455efbac6d7ad17470052d0f4b311a7",
+    "changes": [
+      {
+        "source_text": "KNEEUP膝望是什么？",
+        "english": "",
+        "box": [
+          204.0,
+          152.0,
+          211.0,
+          30.0
+        ]
+      },
+      {
+        "source_text": "KneeUp是一款面向银发与下肢肌力下降人群的穿戴式助力设备。它通过",
+        "english": "",
+        "box": [
+          76.0,
+          417.0,
+          486.0,
+          24.0
+        ]
+      },
+      {
+        "source_text": "传感器实时感知用户动作状态，由AI判断当前所需助力水平，并通过膝关节",
+        "english": "",
+        "box": [
+          54.0,
+          440.0,
+          506.0,
+          21.0
+        ]
+      },
+      {
+        "source_text": "下方的气囊结构，为抬腿、上楼、上坡、起身等动作提供向上的辅助力。",
+        "english": "",
+        "box": [
+          54.0,
+          458.0,
+          476.0,
+          24.0
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-07.png",
+    "english": "deck/page-07-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "5f40f5b69639a4725a0d4ca33e23e1b1cbfabe142a0ebd8f1cb4becd4b3d7668",
+    "changes": [
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-08.png",
+    "english": "deck/page-08-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "de92d166976e04865931d5580991f89ca135816adb5941a2c091a3849e3eeeef",
+    "changes": [
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-09.png",
+    "english": "deck/page-09-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "f8001f82485644474a4022a3fca69114090ff3e881e652b8915bb85d81cafe77",
+    "changes": [
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-10.png",
+    "english": "deck/page-10-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "8e32255553c9281652f871bf06ad3ae5c9a2f3129c2e8e7f5898bae6fd3383bf",
+    "changes": [
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-11.png",
+    "english": "deck/page-11-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "9f55f37b57e53a1fff9df1657a9e2272fdc581d1999b30eb0ebe3710cc2175b8",
+    "changes": [
+      {
+        "source_text": "1感知肌肉状态SenseMuscActvty",
+        "english": "1  Sense Muscle Activity",
+        "box": [
+          110.0,
+          87.0,
+          121.0,
+          19.0
+        ]
+      },
+      {
+        "source_text": "2判断助力需求",
+        "english": "",
+        "box": [
+          348.0,
+          91.0,
+          54.0,
+          14.0
+        ]
+      },
+      {
+        "source_text": "用户开始地作",
+        "english": "",
+        "box": [
+          124.0,
+          121.0,
+          41.0,
+          15.0
+        ]
+      },
+      {
+        "source_text": "不充气，续道测",
+        "english": "",
+        "box": [
+          578.0,
+          121.0,
+          57.0,
+          16.0
+        ]
+      },
+      {
+        "source_text": "EMG采集",
+        "english": "",
+        "box": [
+          193.0,
+          133.0,
+          38.0,
+          16.0
+        ]
+      },
+      {
+        "source_text": "每0.2秒果样电信号",
+        "english": "",
+        "box": [
+          243.0,
+          133.0,
+          61.0,
+          16.0
+        ]
+      },
+      {
+        "source_text": "生成目标气旺",
+        "english": "",
+        "box": [
+          504.0,
+          151.0,
+          40.0,
+          16.0
+        ]
+      },
+      {
+        "source_text": "进入下一检测周期",
+        "english": "",
+        "box": [
+          726.0,
+          164.0,
+          63.0,
+          16.0
+        ]
+      },
+      {
+        "source_text": "停泵并退气",
+        "english": "",
+        "box": [
+          439.0,
+          189.0,
+          44.0,
+          17.0
+        ]
+      },
+      {
+        "source_text": "3执行气囊助力",
+        "english": "",
+        "box": [
+          659.0,
+          204.0,
+          55.0,
+          14.0
+        ]
+      },
+      {
+        "source_text": "气间科技气压",
+        "english": "",
+        "box": [
+          509.0,
+          218.0,
+          40.0,
+          14.0
+        ]
+      },
+      {
+        "source_text": "影动力",
+        "english": "",
+        "box": [
+          208.0,
+          241.0,
+          24.0,
+          14.0
+        ]
+      },
+      {
+        "source_text": "气装充气1秒",
+        "english": "",
+        "box": [
+          685.0,
+          246.0,
+          40.0,
+          14.0
+        ]
+      },
+      {
+        "source_text": "气南经供变择",
+        "english": "",
+        "box": [
+          762.0,
+          249.0,
+          40.0,
+          16.0
+        ]
+      },
+      {
+        "source_text": "实区",
+        "english": "",
+        "box": [
+          837.0,
+          253.0,
+          25.0,
+          15.0
+        ]
+      },
+      {
+        "source_text": "两度气03秒",
+        "english": "",
+        "box": [
+          461.0,
+          281.0,
+          38.0,
+          17.0
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "4  Feedback",
+        "box": [
+          110,
+          191,
+          55,
+          16
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-12.png",
+    "english": "deck/page-12-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "a7c90e8b812087aac6a825861f4b5a1d8fa77f557baa57cdd5bb8e0b5aaca515",
+    "changes": [
+      {
+        "source_text": "感知动作",
+        "english": "Sense",
+        "box": [
+          65.0,
+          112.0,
+          75.0,
+          26.0
+        ]
+      },
+      {
+        "source_text": "理解状态",
+        "english": "Interpret",
+        "box": [
+          343.0,
+          113.0,
+          72.0,
+          25.0
+        ]
+      },
+      {
+        "source_text": "气囊充气",
+        "english": "Inflate",
+        "box": [
+          64.0,
+          214.0,
+          75.0,
+          30.0
+        ]
+      },
+      {
+        "source_text": "判断助力",
+        "english": "Assist",
+        "box": [
+          343.0,
+          217.0,
+          71.0,
+          24.0
+        ]
+      }
+    ]
+  },
+  {
+    "source": "deck/page-13.png",
+    "english": "deck/page-13-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "4fd7b1d59486994f6e0ee27fe7b70ece0786cfb7201a44ff9d6a96e503cfaffe",
+    "changes": [
+      {
+        "source_text": "AI在哪里？",
+        "english": "",
+        "box": [
+          635.0,
+          135.0,
+          122.0,
+          31.0
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "",
+        "box": [
+          843,
+          40,
+          75,
+          35
+        ]
+      }
+    ]
+  },
+  {
+    "source": "hw/airflow_pipeline.png",
+    "english": "hw/airflow_pipeline-en.svg",
+    "method": "Editable SVG text localisation over unchanged original artwork",
+    "source_sha256": "b096fd3bec5c8652252b5959f979c286d56a77f4ed75fb1cc1a314bcc7fca95f",
+    "changes": [
+      {
+        "source_text": "实线=已验证链路",
+        "english": "Solid = verified hardware",
+        "box": [
+          2976.7095947265625,
+          86.71428489685059,
+          255.6129150390625,
+          42.57142448425293
+        ]
+      },
+      {
+        "source_text": "虚线=路线图/待打通",
+        "english": "Dashed = roadmap / pending",
+        "box": [
+          3371.54833984375,
+          86.71428489685059,
+          315.6129150390625,
+          42.57142448425293
+        ]
+      },
+      {
+        "source_text": "AIR-FLOW膝部辅助原型：当前硬件与接下来15小时接入链路",
+        "english": "AIR-FLOW Knee+: current hardware and the web-integration plan",
+        "box": [
+          125.74192810058594,
+          127.21427917480469,
+          1885.2903594970703,
+          73.42858123779297
+        ]
+      },
+      {
+        "source_text": "目标：先打通「肌电信号→控制判断→气动执行→Web可视化J，不夸大未完成能力",
+        "english": "Goal: EMG → control logic → pneumatic actuation → web display. State unfinished capabilities clearly.",
+        "box": [
+          123.80644607543945,
+          219.7857208251953,
+          1294.9677238464355,
+          50.28569793701172
+        ]
+      },
+      {
+        "source_text": "当前已确认的硬件链路",
+        "english": "Verified hardware chain",
+        "box": [
+          267.03224182128906,
+          318.14286041259766,
+          433.6773986816406,
+          54.142860412597656
+        ]
+      },
+      {
+        "source_text": "（实线·VERIFIED",
+        "english": "SOLID · VERIFIED",
+        "box": [
+          704.4516143798828,
+          323.9285583496094,
+          234.3225555419922,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "从肌电感知，到气动执行一真实、可运行的硬件链路",
+        "english": "From EMG sensing to pneumatic actuation: the working bench hardware chain",
+        "box": [
+          2974.774169921875,
+          322.0,
+          696.9033203125,
+          46.428558349609375
+        ]
+      },
+      {
+        "source_text": "待核实",
+        "english": "To verify",
+        "box": [
+          3108.322509765625,
+          391.4285583496094,
+          89.1612548828125,
+          38.71427917480469
+        ]
+      },
+      {
+        "source_text": "腿部肌电传感器",
+        "english": "Leg EMG sensor",
+        "box": [
+          251.5483856201172,
+          497.5,
+          232.3870849609375,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "肌电接口模块",
+        "english": "EMG interface",
+        "box": [
+          708.3225555419922,
+          497.5,
+          205.2903594970703,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "滤波+阈值判断",
+        "english": "Filtering + threshold logic",
+        "box": [
+          1577.3547973632812,
+          497.5,
+          242.0645751953125,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "A5控制输出",
+        "english": "A5 control output",
+        "box": [
+          2049.6129150390625,
+          499.4285583496094,
+          185.9354248046875,
+          44.5
+        ]
+      },
+      {
+        "source_text": "继电器",
+        "english": "Relay",
+        "box": [
+          2529.6129150390625,
+          491.7142791748047,
+          114.322509765625,
+          56.071441650390625
+        ]
+      },
+      {
+        "source_text": "气泵·三通阀",
+        "english": "Pump + 3-way valve",
+        "box": [
+          2928.322509765625,
+          493.64283752441406,
+          207.225830078125,
+          54.14288330078125
+        ]
+      },
+      {
+        "source_text": "气囊·护膝执行端",
+        "english": "Air cells / brace",
+        "box": [
+          3340.5804443359375,
+          493.64283752441406,
+          269.1612548828125,
+          54.14288330078125
+        ]
+      },
+      {
+        "source_text": "放大·滤波",
+        "english": "Amplify + filter",
+        "box": [
+          737.3547973632812,
+          543.7857208251953,
+          147.225830078125,
+          44.5
+        ]
+      },
+      {
+        "source_text": "读取模拟信号",
+        "english": "Read analogue input",
+        "box": [
+          1170.9032287597656,
+          541.8571166992188,
+          166.58062744140625,
+          48.35716247558594
+        ]
+      },
+      {
+        "source_text": "当前闻值参考66.0",
+        "english": "Threshold reference: 66.0",
+        "box": [
+          1587.0322875976562,
+          545.7142791748047,
+          226.58062744140625,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "高/低电平",
+        "english": "HIGH / LOW",
+        "box": [
+          2070.9031372070312,
+          543.7857208251953,
+          145.2904052734375,
+          44.5
+        ]
+      },
+      {
+        "source_text": "开关控制",
+        "english": "Switch control",
+        "box": [
+          2529.6129150390625,
+          543.7857208251953,
+          114.322509765625,
+          44.5
+        ]
+      },
+      {
+        "source_text": "气动执行",
+        "english": "Pneumatic actuation",
+        "box": [
+          2974.774169921875,
+          543.7857208251953,
+          112.3870849609375,
+          44.5
+        ]
+      },
+      {
+        "source_text": "充气/放气",
+        "english": "Inflate / deflate",
+        "box": [
+          3402.515869140625,
+          545.7142791748047,
+          145.2904052734375,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "1当前能确认的真实传感器：肌电（EMG）",
+        "english": "Confirmed physical sensor: EMG",
+        "box": [
+          197.35484313964844,
+          653.7142791748047,
+          573.0322418212891,
+          36.78572082519531
+        ]
+      },
+      {
+        "source_text": "当前程序已能串口输出：",
+        "english": "Current serial output:",
+        "box": [
+          1964.4514770507812,
+          653.7142791748047,
+          377.54852294921875,
+          36.78572082519531
+        ]
+      },
+      {
+        "source_text": "滤波后的肌电数值",
+        "english": "Filtered EMG value",
+        "box": [
+          2322.5160522460938,
+          653.7142791748047,
+          245.9354248046875,
+          36.78572082519531
+        ]
+      },
+      {
+        "source_text": "接下来要打通的Web接入链路",
+        "english": "Web-integration chain to complete",
+        "box": [
+          265.0967712402344,
+          890.9285583496094,
+          590.4515686035156,
+          54.14288330078125
+        ]
+      },
+      {
+        "source_text": "（主任务·INPROGRESS",
+        "english": "MAIN TASK · IN PROGRESS",
+        "box": [
+          867.0321960449219,
+          898.6428833007812,
+          319.4838562011719,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "把真实数据搬到网页上，并用AI生成建议与解释，让过程看得见、可演示",
+        "english": "Bring physical data to the webpage, then add explainable AI recommendations",
+        "box": [
+          2717.3547973632812,
+          896.7142333984375,
+          954.3226928710938,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "界面示意·ILLUSTRATIVE",
+        "english": "ILLUSTRATIVE INTERFACE",
+        "box": [
+          3311.54833984375,
+          956.5,
+          319.4837646484375,
+          44.5
+        ]
+      },
+      {
+        "source_text": "USB串口连接电脑",
+        "english": "USB serial connection to computer",
+        "box": [
+          265.0967712402344,
+          993.1428833007812,
+          259.4838562011719,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "·AIR-FLOW膝部辅助实时监控",
+        "english": "AIR-FLOW Knee+ · Live monitor concept",
+        "box": [
+          2746.3870849609375,
+          1006.6428833007812,
+          431.74169921875,
+          36.785675048828125
+        ]
+      },
+      {
+        "source_text": "浏览器WebSerial读取Arduino数据",
+        "english": "Read Arduino data with browser Web Serial",
+        "box": [
+          263.1612777709961,
+          1087.6428833007812,
+          509.1613235473633,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "实时肌电",
+        "english": "Live EMG",
+        "box": [
+          2742.5160522460938,
+          1095.3571166992188,
+          120.12896728515625,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "AI建议",
+        "english": "AI suggestion",
+        "box": [
+          3267.0321044921875,
+          1087.6428833007812,
+          98.8387451171875,
+          44.5
+        ]
+      },
+      {
+        "source_text": "建议：采用轻辅助策略",
+        "english": "Suggested light assistance",
+        "box": [
+          3268.967529296875,
+          1130.0714416503906,
+          267.225830078125,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "前端实时显示肌电数值/曲线",
+        "english": "Display EMG values and charts in the browser",
+        "box": [
+          267.03224182128906,
+          1186.0,
+          393.03224182128906,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "依据：本次肌电高于基线",
+        "english": "Reason: EMG above baseline",
+        "box": [
+          3270.9029541015625,
+          1168.6428833007812,
+          286.580810546875,
+          36.785675048828125
+        ]
+      },
+      {
+        "source_text": "●执行中·当前充气",
+        "english": "ACTIVE · Inflating",
+        "box": [
+          2765.7418823242188,
+          1253.5,
+          257.54833984375,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "同步显示事件状态：触发/执行/复位",
+        "english": "Synchronise event states: trigger / execute / reset",
+        "box": [
+          267.03224182128906,
+          1280.5,
+          513.0322418212891,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "事件时间线",
+        "english": "Event timeline",
+        "box": [
+          2746.3870849609375,
+          1311.3571166992188,
+          139.4837646484375,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "为何触发/为何未触发>",
+        "english": "Why triggered / why not?",
+        "box": [
+          3268.967529296875,
+          1294.0,
+          286.580810546875,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "本次肌电高于基线",
+        "english": "EMG is above baseline",
+        "box": [
+          3268.967529296875,
+          1330.6428833007812,
+          216.9033203125,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "10:24:15·检测到肌电触发",
+        "english": "10:24:15 · EMG trigger detected",
+        "box": [
+          2746.3870849609375,
+          1355.7142333984375,
+          311.74188232421875,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "10:24:16·AI建议：轻辅助策略",
+        "english": "10:24:16 · AI: light assistance",
+        "box": [
+          2744.4514770507812,
+          1390.4285583496094,
+          369.80645751953125,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "个体化触发建议（即时）·可解释说明（为何触发/为何未触发）",
+        "english": "Personalised trigger suggestions with explanations of why a trigger did or did not occur",
+        "box": [
+          267.03224182128906,
+          1421.2856750488281,
+          816.9031829833984,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "10:24:18·气囊开始充气",
+        "english": "10:24:18 · Inflation starts",
+        "box": [
+          2742.5160522460938,
+          1425.1428833007812,
+          296.25811767578125,
+          44.5
+        ]
+      },
+      {
+        "source_text": "运行时间00:12:36触发次数8",
+        "english": "Runtime 00:12:36 · Triggers 8",
+        "box": [
+          3243.8062744140625,
+          1413.5714416503906,
+          344.6453857421875,
+          44.5
+        ]
+      },
+      {
+        "source_text": "10:24:23·执行完成，进入待机",
+        "english": "10:24:23 · Complete; standby",
+        "box": [
+          2744.4514770507812,
+          1465.6428833007812,
+          369.80645751953125,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "导出日志·CSV",
+        "english": "Export log · CSV",
+        "box": [
+          3247.677490234375,
+          1467.5714416503906,
+          184.0,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "路演页面呈现LiveAssist主界面",
+        "english": "Present the Live Assist interface on the showcase page",
+        "box": [
+          267.03224182128906,
+          1508.0714416503906,
+          441.41937255859375,
+          42.571441650390625
+        ]
+      },
+      {
+        "source_text": "先保证网页读到第一条真实数据，再接入AI生成建议与解释，最后实现状态同步展示",
+        "english": "First receive a physical sample in the browser, then add AI explanations and synchronised state display",
+        "box": [
+          201.2258071899414,
+          1610.2857666015625,
+          1200.1289901733398,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "本次黑客松暂不强求",
+        "english": "Outside the initial integration scope",
+        "box": [
+          170.25806045532227,
+          1700.928466796875,
+          311.74193954467773,
+          42.571533203125
+        ]
+      },
+      {
+        "source_text": "虚线·ROADMAP",
+        "english": "DASHED · ROADMAP",
+        "box": [
+          483.80645751953125,
+          1702.8571166992188,
+          232.3870849609375,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "展示边界",
+        "english": "Demonstration boundaries",
+        "box": [
+          1801.870849609375,
+          1722.1428833007812,
+          145.2904052734375,
+          50.28558349609375
+        ]
+      },
+      {
+        "source_text": "AI呈现位置",
+        "english": "Where AI appears",
+        "box": [
+          2777.3547973632812,
+          1724.0713500976562,
+          185.9354248046875,
+          44.5
+        ]
+      },
+      {
+        "source_text": "膝关节角度传感",
+        "english": "Knee-angle sensing",
+        "box": [
+          247.67742156982422,
+          1780.0,
+          205.29029083251953,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "气囊压力反馈",
+        "english": "Air-cell pressure feedback",
+        "box": [
+          659.9354705810547,
+          1780.0,
+          174.3225555419922,
+          44.5
+        ]
+      },
+      {
+        "source_text": "IMU·姿态识别",
+        "english": "IMU / pose sensing",
+        "box": [
+          1035.4192810058594,
+          1776.1428833007812,
+          209.16134643554688,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "增强版AI模型",
+        "english": "Enhanced AI model",
+        "box": [
+          1434.1289672851562,
+          1776.1428833007812,
+          197.54833984375,
+          48.35711669921875
+        ]
+      },
+      {
+        "source_text": "·AI只做推荐与解释，不直接控制硬件",
+        "english": "• AI recommends and explains; it does not control the hardware directly",
+        "box": [
+          1767.0322875976562,
+          1783.8571166992188,
+          464.64501953125,
+          44.5
+        ]
+      },
+      {
+        "source_text": "前端AI建议卡片：Web界面右侧显示「建议：采用轻辅助策略」",
+        "english": "AI suggestion card in the web interface, e.g. a light-assistance recommendation",
+        "box": [
+          2812.1935424804688,
+          1787.7142333984375,
+          706.5806274414062,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "角度编码器",
+        "english": "Angle encoder",
+        "box": [
+          284.4516143798828,
+          1820.5,
+          131.74192810058594,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "压力传感器",
+        "english": "Pressure sensor",
+        "box": [
+          679.2903137207031,
+          1820.5,
+          131.74188232421875,
+          42.57135009765625
+        ]
+      },
+      {
+        "source_text": "加速度计/陀螺仪",
+        "english": "Accelerometer / gyroscope",
+        "box": [
+          1039.2903137207031,
+          1822.428466796875,
+          203.35479736328125,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "个体化策略引擎",
+        "english": "Personalised policy engine",
+        "box": [
+          1447.6773986816406,
+          1818.5713500976562,
+          176.25802612304688,
+          42.571533203125
+        ]
+      },
+      {
+        "source_text": "·不声称已准确识别楼梯/疲劳/坡度等场景",
+        "english": "• No claim of validated stair, fatigue or slope classification",
+        "box": [
+          1772.8387451171875,
+          1830.1428833007812,
+          540.1289672851562,
+          36.78558349609375
+        ]
+      },
+      {
+        "source_text": "事件时间线中的AI解释：展示原因说明，如「本次肌电高于基线」",
+        "english": "AI explanations in the event timeline, e.g. EMG above the baseline",
+        "box": [
+          2812.1935424804688,
+          1847.5,
+          725.9352416992188,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "不直接进行医学结论或临床效果验证",
+        "english": "• No medical conclusions or clinical efficacy claims",
+        "box": [
+          1776.7095947265625,
+          1872.5713500976562,
+          451.09686279296875,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "这些为后续增强项，不在本次15小时主链路中强行完成",
+        "english": "These are future enhancements, outside the initial integration chain",
+        "box": [
+          166.3870964050293,
+          1897.6428833007812,
+          658.193531036377,
+          44.5
+        ]
+      },
+      {
+        "source_text": "本次黑客松：轻量AI呈现（建议+解释）",
+        "english": "Initial AI presentation: suggestions and explanations",
+        "box": [
+          867.0321960449219,
+          1901.5,
+          464.64520263671875,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "硬件控制仍基于阔值判断，AI用于辅助建议",
+        "english": "Hardware control remains threshold-based; AI provides advisory text",
+        "box": [
+          1776.7095947265625,
+          1915.0,
+          532.3870849609375,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "后续扩展为个体化策略引擎：结合IMU/角度/压力等更多传感器",
+        "english": "Later: a personalised strategy engine using IMU, angle and pressure inputs",
+        "box": [
+          2812.1935424804688,
+          1907.2857666015625,
+          741.4193725585938,
+          36.78558349609375
+        ]
+      },
+      {
+        "source_text": "·本次为真实链路打通，非产品定稿",
+        "english": "• Integration prototype, not a finished product",
+        "box": [
+          1770.9031372070312,
+          1953.5713500976562,
+          431.74188232421875,
+          42.571533203125
+        ]
+      },
+      {
+        "source_text": "未来版本：增强版AI模型（个体化策略引擎）",
+        "english": "Future version: enhanced AI / personalised strategy engine",
+        "box": [
+          193.48385620117188,
+          1982.5,
+          511.0967712402344,
+          36.7857666015625
+        ]
+      },
+      {
+        "source_text": "·Wedemoonlywhatisverifed一只展示已验证的链路，其余为路线图与界面示意",
+        "english": "We demonstrate the verified chain. Remaining functions are roadmap items or interface concepts.",
+        "box": [
+          121.87096405029297,
+          2086.6428833007812,
+          1033.677375793457,
+          40.64288330078125
+        ]
+      },
+      {
+        "source_text": "用技术，让行动更自由·AlxOrigin2026Vital·TeamFreeWill",
+        "english": "Technology for freer movement · AIx Origin 2026 Vital · Team Free Will",
+        "box": [
+          2926.3870849609375,
+          2088.5713500976562,
+          795.6129150390625,
+          40.64288330078125
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "AI recommendations and explanations · AI Assist Engine · EMG and event inputs",
+        "box": [
+          264,
+          1380,
+          1868,
+          46
+        ]
+      },
+      {
+        "source_text": "brand duplicate",
+        "english": "AI explanation",
+        "box": [
+          3268,
+          1258,
+          234,
+          42
+        ]
+      }
+    ]
+  },
+  {
+    "source": "hw/mold_top.jpg",
+    "english": "hw/mold_top-en.png",
+    "method": "ImageGen English label, composited only over the label; original moulds and photo retained",
+    "prompt": "Replace Chinese label printing with English; preserve mould geometry, scene, framing and lighting."
+  }
+]

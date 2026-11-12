@@ -1,0 +1,9 @@
+/* Preserve the original game styling while fitting longer English copy. */
+html:lang(en) .kug-ovl.show { overflow-y: auto; align-items: flex-start; }
+html:lang(en) .kug-card { padding: 12px 20px; width: 100%; min-width: 0; max-width: 600px; margin: auto; flex-shrink: 0; }
+html:lang(en) .kug-card p { margin-bottom: 8px; }
+html:lang(en) .kug-card .kug-bigs { margin: 8px 0; }
+html:lang(en) .kug-card .kug-insight { padding-top: 8px; }
+@media (max-width: 1023px) {
+  html:lang(en) .kug-track:has(.kug-ovl.show) { height: 400px; }
+}

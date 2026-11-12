@@ -1,0 +1,10 @@
+{
+  "method": "Actual browser screenshots of the translated original website; no invented UI",
+  "screenshots": {
+    "patient": "knee_patient",
+    "coach": "knee_doctor",
+    "dashboard": "knee_dashboard",
+    "simulator": "knee_simulator"
+  },
+  "input_source": "SIMULATED; shown explicitly in the captured interface"
+}

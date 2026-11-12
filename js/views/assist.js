@@ -1,0 +1,443 @@
+// Assist Level 助力等级决策面板(#/assist)——纯自绘:gauge 仪表 + 输入因子 + 30s 曲线 + 修正原因流
+// 引擎 js/ai/assist-engine.js(纯函数);数据源 js/ai/assist-sim.js(SIMULATED);蓝本:21-Web平台设计方案 §4.2
+import { tok } from '../viz/charts.js';
+import { AssistEngine, ACTIVITY_LABELS, HARD_CAP, MAX_RATE_PER_SEC, SI_THRESHOLD, FATIGUE_THRESHOLD } from '../ai/assist-engine.js';
+import { createAssistSim, ASSIST_SCENARIOS } from '../ai/assist-sim.js';
+import { getFatigueBoost, writeAssistSnapshot } from '../ai/assist-runtime.js';
+import { createBleSource, bleSupported } from '../ai/ble-source.js';
+import { parseVoiceCommand, VOICE_HINT_TEXT } from '../ai/voice-commands.js';
+
+const WINDOW_S = 30;          // 曲线窗口 30s
+const PUSH_HZ = 10;           // 曲线采样
+const WARN_AT = 35, DANGER_AT = 45;   // 阈值带(安全语义:高助力/接近上限)
+const SCN_ORDER = ['flat', 'standup', 'uphill', 'stairs', 'downhill'];
+
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const fmtT = ts => { const d = new Date(ts); return `${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`; };
+
+/* ---------------- gauge 手绘 ---------------- */
+function drawGauge(cv, d) {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const w = cv.clientWidth || 320, h = cv.clientHeight || 300;
+  if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) {
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+  }
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, w, h);
+
+  const cx = w / 2, cy = h * 0.66, r = Math.min(w * 0.42, h * 0.52);
+  const a0 = Math.PI * 0.75, sweep = Math.PI * 1.5;          // 135° → 405°(270° 量程)
+  const va = v => a0 + (clamp(v, 0, HARD_CAP) / HARD_CAP) * sweep;
+  const band = (v0, v1, color, width) => {
+    ctx.beginPath(); ctx.arc(cx, cy, r, va(v0), va(v1));
+    ctx.strokeStyle = color; ctx.lineWidth = width; ctx.lineCap = 'butt'; ctx.stroke();
+  };
+
+  // 阈值带:0-35 碳黑轨道 / 35-45 warn / 45-50 danger(仅安全语义)
+  band(0, WARN_AT, tok('--carbon-700'), 12);
+  band(WARN_AT, DANGER_AT, tok('--warn'), 12);
+  band(DANGER_AT, HARD_CAP, tok('--danger'), 12);
+  // 刻度 + 数字
+  ctx.font = '10px ' + tok('--font-mono'); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  for (let v = 0; v <= HARD_CAP; v += 10) {
+    const a = va(v);
+    ctx.strokeStyle = tok('--line-strong'); ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(cx + Math.cos(a) * (r - 8), cy + Math.sin(a) * (r - 8));
+    ctx.lineTo(cx + Math.cos(a) * (r + 8), cy + Math.sin(a) * (r + 8));
+    ctx.stroke();
+    ctx.fillStyle = tok('--muted');
+    ctx.fillText(String(v), clamp(cx + Math.cos(a) * (r + 20), 12, w - 12), clamp(cy + Math.sin(a) * (r + 20), 8, h - 8));
+  }
+  // 当前值钴蓝弧
+  const lv = clamp(d.level, 0, HARD_CAP);
+  if (lv > 0.05) {
+    ctx.beginPath(); ctx.arc(cx, cy, r, va(0), va(lv));
+    ctx.strokeStyle = tok('--accent'); ctx.lineWidth = 14; ctx.lineCap = 'round'; ctx.stroke();
+  }
+  // 目标值刻点(限速过渡中可见目标)
+  if (d.rateLimited) {
+    const a = va(d.target);
+    ctx.fillStyle = tok('--accent-2');
+    ctx.beginPath(); ctx.arc(cx + Math.cos(a) * r, cy + Math.sin(a) * r, 3.5, 0, 7); ctx.fill();
+  }
+  // 中央大数字(JetBrains Mono)
+  ctx.fillStyle = tok('--ink');
+  ctx.font = '700 ' + Math.round(r * 0.52) + 'px ' + tok('--font-mono');
+  ctx.fillText(String(Math.round(lv)), cx, cy - r * 0.28);
+  ctx.font = '600 ' + Math.round(r * 0.16) + 'px ' + tok('--font-mono');
+  ctx.fillStyle = tok('--accent');
+  ctx.fillText('%', cx + r * 0.42, cy - r * 0.28);
+  ctx.font = '10px ' + tok('--font-mono');
+  ctx.fillStyle = tok('--muted');
+  ctx.fillText("ASSIST LEVEL", cx, cy + r * 0.02);
+  ctx.fillText(`${ACTIVITY_LABELS[d.activity] || d.activity} · ${d.activity}`, cx, cy + r * 0.2);
+  if (d.capped) {
+    ctx.fillStyle = tok('--danger');
+    ctx.fillText(`HARD CAP REACHED ${HARD_CAP}%`, cx, cy + r * 0.38);
+  } else if (d.rateLimited) {
+    ctx.fillStyle = tok('--accent-2');
+    ctx.fillText(`Rate-limited transition → target ${Math.round(d.target)}%`, cx, cy + r * 0.38);
+  }
+  cv.setAttribute('aria-label', `Assist-level gauge: current ${Math.round(lv)}%, target ${Math.round(d.target)}%${d.capped ? ", 50% hard cap reached" : ''}`);
+}
+
+/* ---------------- 30s 曲线(charts.js 风格) ---------------- */
+function drawTrend(cv, buf, tNow) {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const w = cv.clientWidth || 640, h = cv.clientHeight || 180;
+  if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) {
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+  }
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, w, h);
+
+  const mL = 34, mR = 12, mT = 12, mB = 20;
+  const x0 = mL, x1 = w - mR, ph = h - mT - mB;
+  const px = t => x1 - (tNow - t) * ((x1 - x0) / WINDOW_S);
+  const py = v => mT + ph - ph * (v / HARD_CAP);
+
+  ctx.font = '10px ' + tok('--font-mono'); ctx.lineWidth = 1;
+  for (let v = 0; v <= HARD_CAP; v += 10) {
+    const y = Math.round(py(v)) + .5;
+    ctx.strokeStyle = tok('--line'); ctx.fillStyle = tok('--muted');
+    ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x1, y); ctx.stroke();
+    ctx.textAlign = 'right'; ctx.fillText(v + '%', x0 - 6, y + 3);
+  }
+  // warn/danger 阈值虚线
+  for (const [v, c] of [[WARN_AT, tok('--warn')], [DANGER_AT, tok('--danger')]]) {
+    ctx.save();
+    ctx.strokeStyle = c; ctx.setLineDash([5, 4]); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x0, py(v)); ctx.lineTo(x1, py(v)); ctx.stroke();
+    ctx.restore();
+  }
+  const vis = buf.filter(p => p.t >= tNow - WINDOW_S - 0.2);
+  if (vis.length > 1) {
+    // 面积 veil + accent 主线
+    ctx.beginPath();
+    vis.forEach((p, i) => i ? ctx.lineTo(px(p.t), py(p.v)) : ctx.moveTo(px(p.t), py(p.v)));
+    ctx.lineTo(px(vis[vis.length - 1].t), mT + ph); ctx.lineTo(px(vis[0].t), mT + ph); ctx.closePath();
+    ctx.fillStyle = tok('--accent-veil'); ctx.fill();
+    ctx.beginPath();
+    vis.forEach((p, i) => i ? ctx.lineTo(px(p.t), py(p.v)) : ctx.moveTo(px(p.t), py(p.v)));
+    ctx.strokeStyle = tok('--accent'); ctx.lineWidth = 2; ctx.stroke();
+  }
+  ctx.fillStyle = tok('--muted'); ctx.textAlign = 'center';
+  for (let s = 0; s <= WINDOW_S; s += 10) ctx.fillText(`-${s}s`, px(tNow - s), h - 6);
+}
+
+/* ---------------- 视图 ---------------- */
+export function render(root) {
+  root.innerHTML = `
+  <div class="view-head">
+    <span class="eyebrow">Assist Level</span>
+    <h1>Assist Level Decision Panel</h1>
+    <p class="view-sub">Explainable rules: activity baseline (level ground 10 / stand up 25 / uphill 35 / stairs up 30 / downstairs 20) + 3pp for every 5% of SI above ${SI_THRESHOLD}% + 2pp for every 10 points of fatigue above ${FATIGUE_THRESHOLD}  · Hard cap  ${HARD_CAP}% · Output rate limit ≤${MAX_RATE_PER_SEC} pp/s</p>
+  </div>
+
+  <div class="as-scn" id="as-scn" role="group" aria-label="Scenario selection (simulated)">
+    ${SCN_ORDER.map(k => `<button type="button" class="fchip${k === 'flat' ? ' is-on' : ''}" data-scn="${k}">${ACTIVITY_LABELS[k]}<span class="as-scn-en">${k.toUpperCase()}</span></button>`).join('')}
+  </div>
+  <div class="as-scn">
+    <button type="button" class="fchip as-ble" id="as-ble">Connect Brace via BLE · LIVE</button>
+    <span class="as-ble-note muted" id="as-ble-note"></span>
+  </div>
+
+  <div class="as-grid">
+    <div class="panel as-gauge-panel">
+      <span class="ku-chip sim as-chip">SIMULATED</span>
+      <canvas class="as-gauge" id="as-gauge" role="img"></canvas>
+      <p class="as-readout" id="as-readout">Baseline 10% · No modifiers · Target 10%</p>
+    </div>
+
+    <div class="panel">
+      <h3>Input Factors</h3>
+      <p class="panel-sub">Simulated sensor stream varies by scenario. Knee angle and speed are observation inputs, not direct v1 rule modifiers. Fatigue includes the training game's contribution, which decays over 10 minutes.</p>
+      <div class="as-factors">
+        <div class="as-factor"><span class="k">Activity</span><span class="v badge" id="as-f-act">Level ground · FLAT</span></div>
+        <div class="as-factor"><span class="k">Knee angle</span><span class="v" id="as-f-knee">—</span><span class="bar"><i id="as-b-knee"></i><em style="left:${(100 / 190) * 100}%"></em></span></div>
+        <div class="as-factor"><span class="k">Speed</span><span class="v" id="as-f-speed">—</span><span class="bar"><i id="as-b-speed"></i></span></div>
+        <div class="as-factor"><span class="k">Asymmetry SI</span><span class="v" id="as-f-si">—</span><span class="bar"><i id="as-b-si"></i><em style="left:${(SI_THRESHOLD / 25) * 100}%"></em></span></div>
+        <div class="as-factor"><span class="k">Fatigue index</span><span class="v" id="as-f-fat">—</span><span class="bar"><i id="as-b-fat"></i><em style="left:${FATIGUE_THRESHOLD}%"></em></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Assist% Over Time</h3>
+    <p class="panel-sub">Rolling window: ${WINDOW_S} seconds · Fixed vertical scale 0–${HARD_CAP}% · Dashed lines: thresholds  ${WARN_AT}/${DANGER_AT}</p>
+    <div class="screen-canvas-wrap sim-skin">
+      <canvas class="chart-canvas as-trend" id="as-trend" role="img" aria-label="Assist level over time, rolling 30-second window"></canvas>
+      <div class="sim-stripes" aria-hidden="true"></div>
+    </div>
+    <div class="legend-row">
+      <span class="lg"><i></i>Assist% (rate-limited output)</span>
+      <span class="lg"><i class="dash"></i>Threshold ${WARN_AT}%</span>
+      <span class="lg"><i class="dash" style="border-top-color:var(--danger)"></i>Threshold ${DANGER_AT}%</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Modifier Feed</h3>
+    <p class="panel-sub">Explainable stepwise rule modifiers, recorded when they change</p>
+    <ul class="as-feed" id="as-feed"><li class="muted">No modifiers · Baseline output</li></ul>
+  </div>
+
+  <div class="panel">
+    <h3>Voice Assistant × M5 Bridge</h3>
+    <p class="panel-sub">Voice recognition and synthesis use the browser's Web Speech API · M5 bridge: Web Serial at 115200 baud ·  <b>Protocol and firmware have NOT been tested together on physical hardware</b></p>
+    <div class="as-vm">
+      <div class="as-vm-row">
+        <button class="btn ghost" id="as-voice-btn" type="button">🎙 Start Listening</button>
+        <span class="ku-chip">BROWSER · Speech API</span>
+        <span class="as-vm-status muted" id="as-voice-status"></span>
+      </div>
+      <p class="as-vm-log" id="as-voice-log">Say: start training / stop / switch to uphill / report current assistance</p>
+    </div>
+    <div class="as-vm as-vm-m5">
+      <div class="as-vm-row">
+        <button class="btn ghost" id="as-m5-btn" type="button">Connect M5 (Serial)</button>
+        <span class="ku-chip sim">UNTESTED · No physical integration test</span>
+        <span class="as-vm-status muted" id="as-m5-status"></span>
+      </div>
+      <p class="as-vm-log muted">Downlink ASSIST:%;SCENE:activity;FATIGUE:index (limited to 1Hz) · Uplink BTN:A = report assistance / BTN:B = next scenario · See docs/M5-PROTOCOL.md</p>
+    </div>
+  </div>
+
+  <p class="screen-foot">This is a rule-engine demonstration with SIMULATED data. Assistance output is a demonstration reference, not a recommended device setting. The hard cap of  ${HARD_CAP}% and rate limit of ≤${MAX_RATE_PER_SEC}pp/s are constraints in the demonstration logic.</p>`;
+
+  const sim = createAssistSim({ seed: 11 });
+  const eng = new AssistEngine();
+  sim.setScenario('flat');
+
+  // BLE 实机通道(LIVE):连接后膝角/SI 取自实机，速度与疲劳仍由模拟通道补全(如实标注)
+  const chipEl = root.querySelector('.as-chip');
+  const bleBtn = root.querySelector('#as-ble');
+  const bleNote = root.querySelector('#as-ble-note');
+  const ble = createBleSource({
+    onState(s, detail) {
+      if (s === 'live') {
+        chipEl.className = 'ku-chip live as-chip'; chipEl.textContent = "LIVE · BLE sensor input";
+        bleBtn.classList.add('is-on'); bleBtn.textContent = "Disconnect BLE";
+        bleNote.textContent = `Connected${detail ? ' ' + detail : ''} · Knee angle and asymmetry use device input; speed and fatigue remain simulated`;
+      } else if (s === 'closed') {
+        chipEl.className = 'ku-chip sim as-chip'; chipEl.textContent = "SIMULATED";
+        bleBtn.classList.remove('is-on'); bleBtn.textContent = "Connect Brace via BLE · LIVE";
+        bleNote.textContent = "Disconnected; returning to simulated input";
+      } else if (s === 'connecting') { bleNote.textContent = "Connecting…"; }
+    },
+  });
+  if (!bleSupported()) {
+    bleBtn.disabled = true;
+    bleNote.textContent = "Web Bluetooth is unavailable here · Use desktop or Android Chrome";
+  } else {
+    bleBtn.addEventListener('click', async () => {
+      if (ble.running) { await ble.stop(); return; }
+      try { await ble.start(); }
+      catch (e) {
+        bleNote.textContent = e && e.name === 'NotFoundError' && /cancel/i.test(e.message || '')
+          ? "Device selection cancelled"
+          : `Connection failed (${e && e.name || "Unknown"}) · Keeping simulated input`;
+      }
+    });
+  }
+
+  const cvG = root.querySelector('#as-gauge');
+  const cvT = root.querySelector('#as-trend');
+  const readout = root.querySelector('#as-readout');
+  const feed = root.querySelector('#as-feed');
+  const F = {
+    act: root.querySelector('#as-f-act'), knee: root.querySelector('#as-f-knee'),
+    speed: root.querySelector('#as-f-speed'), si: root.querySelector('#as-f-si'), fat: root.querySelector('#as-f-fat'),
+  };
+  const B = {
+    knee: root.querySelector('#as-b-knee'), speed: root.querySelector('#as-b-speed'),
+    si: root.querySelector('#as-b-si'), fat: root.querySelector('#as-b-fat'),
+  };
+
+  const state = { buf: [], clock: 0, lastPush: 0, lastDom: 0, lastSnap: 0, lastSig: '', raf: 0, dead: false, lastLevel: 10, lastActivity: 'flat' };
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function pushFeed(d, wallTs) {
+    const sig = d.modifiers.map(m => m.delta).join('|') + (d.capped ? '#cap' : '');
+    if (sig === state.lastSig) return;
+    state.lastSig = sig;
+    const items = [];
+    if (!d.modifiers.length && !d.capped) {
+      items.push(`<li><span class="t">${fmtT(wallTs)}</span><span class="muted">No modifiers · Baseline ${d.base}%</span></li>`);
+    } else {
+      d.modifiers.forEach(m => items.push(`<li><span class="t">${fmtT(wallTs)}</span><span class="pp">+${m.delta}pp</span><span>${m.reason}</span></li>`));
+      if (d.capped) items.push(`<li class="cap"><span class="t">${fmtT(wallTs)}</span><span class="pp">Hard cap</span><span>Output capped at ${HARD_CAP}%</span></li>`);
+    }
+    feed.insertAdjacentHTML('afterbegin', items.join(''));
+    while (feed.children.length > 8) feed.lastElementChild.remove();
+  }
+
+  function tick(now) {
+    if (state.dead) return;
+    const f = sim.frame(now);
+    const bf = ble.running ? ble.getFrame() : null;
+    if (bf) {
+      // BLE LIVE:膝角取实机较小值;SI=|L−R|/(0.5(L+R))×100%(蓝本 §4.1③)
+      const L = bf.angleL, R = bf.angleR;
+      if (L != null) f.kneeAngle = L;
+      if (L != null && R != null) f.si = clamp(Math.abs(L - R) / Math.max(1, (L + R) / 2) * 100, 0, 100);
+    }
+    const boost = getFatigueBoost();           // 游戏结算写回的疲劳贡献(10min 衰减)
+    const fatigueTotal = clamp(f.fatigue + boost, 0, 100);
+    const d = eng.update({ ...f, fatigue: fatigueTotal }, now);
+    state.clock = now / 1000;
+
+    if (now - state.lastPush >= 1000 / PUSH_HZ) {
+      state.lastPush = now;
+      state.buf.push({ t: state.clock, v: d.level });
+      if (state.buf.length > WINDOW_S * PUSH_HZ + 20) state.buf.splice(0, state.buf.length - WINDOW_S * PUSH_HZ);
+    }
+    if (!reduced || now - state.lastDom > 1000) {
+      drawGauge(cvG, d);
+      drawTrend(cvT, state.buf, state.clock);
+    }
+    if (now - state.lastDom > 250) {
+      state.lastDom = now;
+      F.act.textContent = `${ACTIVITY_LABELS[f.activity]} ${f.activity.toUpperCase()}`;
+      F.knee.textContent = `${Math.round(f.kneeAngle)}°`;
+      F.speed.textContent = `${f.speed.toFixed(1)} km/h`;
+      F.si.textContent = `${f.si.toFixed(1)} %`;
+      F.fat.textContent = `${Math.round(fatigueTotal)} /100${boost > 0.5 ? `(includes training contribution +${Math.round(boost)})` : ''}`;
+      B.knee.style.width = `${clamp(f.kneeAngle / 190 * 100, 0, 100)}%`;
+      B.speed.style.width = `${clamp(f.speed / 6 * 100, 0, 100)}%`;
+      B.si.style.width = `${clamp(f.si / 25 * 100, 0, 100)}%`;
+      B.fat.style.width = `${clamp(fatigueTotal, 0, 100)}%`;
+      const mods = d.modifiers.reduce((s, m) => s + m.delta, 0);
+      readout.textContent = `Baseline ${d.base}% + modifiers +${mods}% = target ${d.target}%${d.capped ? ` · Capped at ${HARD_CAP}%` : ''}${d.rateLimited ? ` · Rate-limited output ${d.level.toFixed(1)}%` : ''}`;
+      pushFeed(d, Date.now());
+      state.lastLevel = d.level; state.lastActivity = f.activity;
+    }
+    if (now - state.lastSnap > 500) {
+      state.lastSnap = now;
+      writeAssistSnapshot({ level: d.level, activity: d.activity });   // 跨页共享快照
+    }
+    // M5 下行状态行(1Hz 节流,值变化才发):ASSIST:%;SCENE:场景;FATIGUE:指数
+    if (m5Open && now - m5LastSendAt > 1000) {
+      const line = `ASSIST:${Math.round(d.level)};SCENE:${d.activity};FATIGUE:${Math.round(fatigueTotal)}`;
+      if (line !== m5LastSent) { m5LastSent = line; m5SendLine(line); }
+      m5LastSendAt = now;
+    }
+    state.raf = requestAnimationFrame(tick);
+  }
+  state.raf = requestAnimationFrame(tick);
+
+  root.querySelector('#as-scn').addEventListener('click', e => {
+    const btn = e.target.closest('[data-scn]'); if (!btn) return;
+    root.querySelectorAll('#as-scn .fchip').forEach(b => b.classList.toggle('is-on', b === btn));
+    sim.setScenario(btn.dataset.scn);
+  });
+
+  /* ---- 语音助手(Web Speech 本地识别/合成，不经云端) ---- */
+  const vBtn = root.querySelector('#as-voice-btn'), vStatus = root.querySelector('#as-voice-status'), vLog = root.querySelector('#as-voice-log');
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let recog = null, listening = false;
+  const speak = text => {
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text); u.lang = 'en-GB';
+    speechSynthesis.speak(u);
+  };
+  const applyScene = scene => {
+    sim.setScenario(scene);
+    root.querySelectorAll('#as-scn .fchip[data-scn]').forEach(b => b.classList.toggle('is-on', b.dataset.scn === scene));
+  };
+  const reportAssist = () => `Current assistance level:  ${Math.round(state.lastLevel)}%, scenario: ${ACTIVITY_LABELS[state.lastActivity] || state.lastActivity}`;
+  if (!SR) {
+    vBtn.disabled = true;
+    vStatus.textContent = "Speech recognition is unavailable in this browser · Try desktop Chrome";
+  } else {
+    vBtn.addEventListener('click', () => {
+      if (listening) { try { recog && recog.stop(); } catch {} return; }
+      recog = new SR();
+      recog.lang = 'en-GB'; recog.interimResults = false; recog.maxAlternatives = 1;
+      recog.onstart = () => { listening = true; vBtn.textContent = "■ Stop Listening"; vStatus.textContent = "Listening…"; };
+      recog.onend = () => { listening = false; vBtn.textContent = "🎙 Start Listening"; vStatus.textContent = ''; };
+      recog.onerror = ev => { vStatus.textContent = `Recognition unavailable (${ev.error})`; };
+      recog.onresult = ev => {
+        const text = ev.results[0][0].transcript;
+        const cmd = parseVoiceCommand(text);
+        let reply;
+        if (!cmd) reply = "I did not catch that. " + VOICE_HINT_TEXT;
+        else if (cmd.action === 'set-scene') { applyScene(cmd.scene); reply = `Switched to ${ACTIVITY_LABELS[cmd.scene]}`; }
+        else if (cmd.action === 'report-assist') reply = reportAssist();
+        else if (cmd.action === 'start-training') { reply = "Opening the training game"; location.hash = '#/game'; }
+        else reply = "Stopped";
+        vLog.textContent = `“${text}”→ ${reply}`;
+        speak(reply);
+      };
+      try { recog.start(); } catch {}
+    });
+  }
+
+  /* ---- M5 串口桥接(Web Serial 115200；协议/固件未实机联调，如实标注) ---- */
+  const m5Btn = root.querySelector('#as-m5-btn'), m5Status = root.querySelector('#as-m5-status');
+  let m5Port = null, m5Reader = null, m5Open = false, m5LastSent = '', m5LastSendAt = 0;
+  let sceneIdx = 0;
+  async function m5Disconnect() {
+    m5Open = false;
+    try { m5Reader && await m5Reader.cancel(); } catch {}
+    try { m5Port && await m5Port.close(); } catch {}
+    m5Reader = null; m5Port = null;
+    m5Btn.classList.remove('is-on'); m5Btn.textContent = "Connect M5 (Serial)";
+    m5Status.textContent = "Disconnected";
+  }
+  async function m5SendLine(line) {
+    if (!m5Open || !m5Port) return;
+    try {
+      const w = m5Port.writable.getWriter();
+      await w.write(new TextEncoder().encode(line + '\n'));
+      w.releaseLock();
+    } catch {}
+  }
+  if (!('serial' in navigator)) {
+    m5Btn.hidden = true;
+    m5Status.textContent = "Web Serial is unavailable in this browser · M5 bridge unavailable";
+  } else {
+    m5Btn.addEventListener('click', async () => {
+      if (m5Open) { await m5Disconnect(); return; }
+      try {
+        m5Port = await navigator.serial.requestPort();
+        await m5Port.open({ baudRate: 115200 });
+        m5Open = true;
+        m5Btn.classList.add('is-on'); m5Btn.textContent = "Disconnect M5";
+        m5Status.textContent = "Connected · 115200 8N1 (UNTESTED on physical hardware)";
+        const dec = new TextDecoder();
+        m5Reader = m5Port.readable.getReader();
+        let buf = '';
+        while (m5Open) {
+          const { value, done } = await m5Reader.read();
+          if (done) break;
+          buf += dec.decode(value, { stream: true });
+          const lines = buf.split('\n'); buf = lines.pop() || '';
+          for (const raw of lines) {
+            const line = raw.trim();
+            if (line === 'BTN:A') { const r = reportAssist(); vLog.textContent = `[M5 BTN:A] → ${r}`; speak(r); }
+            else if (line === 'BTN:B') { sceneIdx = (sceneIdx + 1) % SCN_ORDER.length; applyScene(SCN_ORDER[sceneIdx]); vLog.textContent = `[M5 BTN:B] → Switched to ${ACTIVITY_LABELS[SCN_ORDER[sceneIdx]]}`; }
+            else if (line) vLog.textContent = `[M5] ${line}`;
+          }
+        }
+        if (m5Open) m5Disconnect();
+      } catch (e) {
+        m5Status.textContent = e && e.name === 'NotFoundError' ? "Port selection cancelled" : "Connection failed · Remaining disconnected";
+        m5Open = false; m5Port = null;
+      }
+    });
+  }
+
+  return () => {
+    state.dead = true;
+    cancelAnimationFrame(state.raf);
+    try { ble.running && ble.stop(); } catch {}
+    try { recog && recog.stop(); } catch {}
+    try { 'speechSynthesis' in window && speechSynthesis.cancel(); } catch {}
+    try { m5Open && m5Disconnect(); } catch {}
+  };
+}

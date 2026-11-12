@@ -1,0 +1,192 @@
+{
+  "testedAt": "2026-11-12T11:07:23.781Z",
+  "upstreamCommit": "f505cf1378a072ddf6635b1be62a7798506d83e2",
+  "results": [
+    {
+      "name": "10,000 assistance decisions match the original numerical outputs",
+      "status": "PASS"
+    },
+    {
+      "name": "2,000 stateful, rate-limited assistance frames match the original",
+      "status": "PASS"
+    },
+    {
+      "name": "js/ai/pose-engine.js: byte-identical calculation / state implementation",
+      "status": "PASS"
+    },
+    {
+      "name": "js/ai/sim-source.js: byte-identical calculation / state implementation",
+      "status": "PASS"
+    },
+    {
+      "name": "js/ai/assist-sim.js: byte-identical calculation / state implementation",
+      "status": "PASS"
+    },
+    {
+      "name": "js/ai/assist-runtime.js: byte-identical calculation / state implementation",
+      "status": "PASS"
+    },
+    {
+      "name": "js/store.js: byte-identical calculation / state implementation",
+      "status": "PASS"
+    },
+    {
+      "name": "js/bus.js: byte-identical calculation / state implementation",
+      "status": "PASS"
+    },
+    {
+      "name": "English voice commands produce the original actions and scene keys",
+      "status": "PASS"
+    },
+    {
+      "name": "js/data/repo.js: all non-localised AST fields unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "js/data/export.js: all non-localised AST fields unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "js/ai/assist-engine.js: all non-localised AST fields unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "js/ai/ble-source.js: all non-localised AST fields unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\assist-engine.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\assist-engine.test.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\assist-runtime.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\assist-sim.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\ble-source.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\mp-loader.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\pose-engine.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\pose-engine.test.mjs",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\sim-source.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\ai\\voice-commands.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\body\\bodymap.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\bus.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\data\\export.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\data\\repo.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\demo-bind.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\game\\game.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\router.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\store.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\three\\scene.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\views\\assist.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\views\\body.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\views\\coach.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\views\\game-embed.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\views\\patient.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\views\\screen.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: js\\viz\\charts.js",
+      "status": "PASS"
+    },
+    {
+      "name": "JavaScript syntax: meniscus\\js\\main.js",
+      "status": "PASS"
+    },
+    {
+      "name": "30 vendor, model, firmware and CSS files retain their original hashes",
+      "status": "PASS"
+    },
+    {
+      "name": "All five HTML entry points use English language metadata",
+      "status": "PASS"
+    },
+    {
+      "name": "Original storage namespace, schema keys and channel enums remain present",
+      "status": "PASS"
+    },
+    {
+      "name": "129 local HTML, CSS and module references resolve on disk",
+      "status": "PASS"
+    },
+    {
+      "name": "HTTP resources resolve under /IDAT7212/",
+      "status": "PASS"
+    },
+    {
+      "name": "HTTP resources resolve under /kneeup-english/",
+      "status": "PASS"
+    }
+  ],
+  "passed": 46,
+  "failed": 0
+}
